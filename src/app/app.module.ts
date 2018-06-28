@@ -2,15 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { AppModuleHttpService } from './services/app-module-http.service';
+import { HttpClientModule } from '@angular/common/http';
+import { SupportComponent } from './components/support/support.component';
+import { PrivacyComponent } from './components/privacy/privacy.component';
+import { UseragreementComponent } from './components/useragreement/useragreement.component';
+import { HomecomponentComponent } from './components/homecomponent/homecomponent.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SupportComponent,
+    PrivacyComponent,
+    UseragreementComponent,
+    HomecomponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AppModuleHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
