@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'support.html', component: SupportComponent },
   { path: 'useragreement.html', component: UseragreementComponent },
   { path: 'privacy.html', component: PrivacyComponent },
-  { path: ':eventType/:id', component: HomecomponentComponent },
+  { path: ':id', component: HomecomponentComponent },
 ];
 
 

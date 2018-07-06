@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 export class AppModuleHttpService {
 
     baseUrl:string = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi";
+    // baseUrl:string = "https://hinter.sg/hinterapi";
+    // baseUrl:string = "https://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com/hinterapi";
 
     constructor(
         private http: HttpClient) {
@@ -14,16 +16,13 @@ export class AppModuleHttpService {
     }
 
     getEntryDetailInfo(eventType:string,entryId:string): Observable<any> {
-        let  headers = new HttpHeaders(
-            {
-                'authToken':'09ff19f8-006d-4e90-81a2-a5163750d72e',
-                'email':'arjunkapoor.nsit@gmail.com'
-            });
-        return this.http.post<any>((this.baseUrl + "/entry/"+eventType+"/"+entryId+"/get"), {
-            'authToken':'09ff19f8-006d-4e90-81a2-a5163750d72e',
-                'email':'arjunkapoor.nsit@gmail.com'
-        }, {
-            headers: headers,
+        return this.http.get<any>((this.baseUrl + "/web/"+eventType+"/"+entryId),  {
+            observe: 'response'
+        });
+    }
+
+    getUserDetailInfo(userId:string): Observable<any> {
+        return this.http.get<any>((this.baseUrl + "/web/user?id="+userId),  {
             observe: 'response'
         });
     }
