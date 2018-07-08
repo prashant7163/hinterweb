@@ -12,6 +12,8 @@ import { ApplicationInteractor } from '../../models/application-interactor';
 })
 export class HomecomponentComponent implements OnInit {
 
+  isApple:boolean = false;
+  isDev: boolean = false;
   constructor(@Inject(DOCUMENT) private document: Document, private titleService: Title, private route: ActivatedRoute, private appServices: AppModuleHttpService) {
 
   }
@@ -22,32 +24,36 @@ export class HomecomponentComponent implements OnInit {
         let id: string = params.get('id');
         id = atob(id);
         var userAgent = navigator.userAgent || navigator.vendor;
-        // if (/iPad|iPhone|iPod/.test(userAgent) ) {
-        //   if(/safari/i.test(userAgent)){
-        //     if(id.indexOf('web')==-1){
-        //       window.location.href = "com.solution.hinter://"+params.get('id');
-        //     }else{
-        //       window.location.href = "com.solution.hinterdev://"+params.get('id');
-        //     }
-        //     setTimeout(()=>{
-        //       window.location.href = "https://goo.gl/fGGi8";
-        //     },100);
-        //   }else{
-        //     window.location.href = "https://goo.gl/fGGi8";
-        //   }
-        // }
-        if (id != null ) {
-          let idSplit:string[] = id.split("/");
-          if(idSplit!=null && idSplit.length>1){
-            if(idSplit[idSplit.length-2].toLowerCase()=='findme'){
-              this.appServices.getUserDetailInfo( idSplit[idSplit.length-1]).subscribe((res: any) => {
+        if (/iPad|iPhone|iPod/.test(userAgent) ) {
+          this.isApple = true;
+          // if(/safari/i.test(userAgent)){
+            if(id.indexOf('dev')==-1){
+              window.location.href = "com.solution.hinter://"+params.get('id');
+            }else{
+              window.location.href = "com.solution.hinterdev://"+params.get('id');
+            }
+            setTimeout(()=>{
+              window.location.href = "https://goo.gl/fGGi8d";
+            },2000);
+          // }else{
+          //   window.location.href = "https://goo.gl/fGGi8";
+          // }
+        }
+        if (id != null) {
+          if (id.indexOf('dev') != -1) {
+            this.isDev = true;
+          }
+          let idSplit: string[] = id.split("/");
+          if (idSplit != null && idSplit.length > 1) {
+            if (idSplit[idSplit.length - 2].toLowerCase() == 'findme' || idSplit[idSplit.length - 2].toLowerCase() == 'user') {
+              this.appServices.getUserDetailInfo(idSplit[idSplit.length - 1], this.isDev).subscribe((res: any) => {
                 console.log(res);
                 if (res && res.body) {
                   this.createUserSEOTags(res.body);
                 }
               });
-            }else{
-              this.appServices.getEntryDetailInfo(idSplit[idSplit.length-2], idSplit[idSplit.length-1]).subscribe((res: any) => {
+            } else {
+              this.appServices.getEntryDetailInfo(idSplit[idSplit.length - 2], idSplit[idSplit.length - 1], this.isDev).subscribe((res: any) => {
                 console.log(res);
                 if (res && res.body) {
                   this.createEntrySEOTags(res.body);
@@ -55,7 +61,7 @@ export class HomecomponentComponent implements OnInit {
               });
             }
           }
-         
+
         }
       }
     );
@@ -71,13 +77,17 @@ export class HomecomponentComponent implements OnInit {
       let userData: any = userDetail.data[0];
       let seo_title: string = userData.name;
       let seo_desc: string = "";
-      if(userData && userData.profile){
+      if (userData && userData.profile) {
         seo_desc = userData.profile.place;
       }
       let seo_url: string = window.location.href;
       let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
-      if (userData  ) {
-        seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo?userId=" + userData.email+"&dpTime="+userData.dpTime;
+      if (userData) {
+        if(this.isDev){
+          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+        }else{
+          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+        }
       }
       this.setTitle(seo_title);
       let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
@@ -104,7 +114,7 @@ export class HomecomponentComponent implements OnInit {
 
   }
 
-  hexEncode(str:string) {
+  hexEncode(str: string) {
     var hex, i;
 
     var result = "";
@@ -116,7 +126,7 @@ export class HomecomponentComponent implements OnInit {
     return result;
   }
 
-  hexDecode(str:string) {
+  hexDecode(str: string) {
     var j;
     var hexes = str.match(/.{1,4}/g) || [];
     var back = "";
@@ -127,21 +137,21 @@ export class HomecomponentComponent implements OnInit {
     return back;
   }
 
-  convertUniCodeToStr(str:string):string{
+  convertUniCodeToStr(str: string): string {
     console.log(str);
-    while(str.indexOf("\\u")!=-1){
-      let uIndex:number = str.indexOf("\\u");
-      let sIndex:number = str.indexOf(" ",uIndex);
-      if(sIndex==-1){
-        sIndex=str.length;
+    while (str.indexOf("\\u") != -1) {
+      let uIndex: number = str.indexOf("\\u");
+      let sIndex: number = str.indexOf(" ", uIndex);
+      if (sIndex == -1) {
+        sIndex = str.length;
       }
-      console.log(uIndex+" "+sIndex);
-      let temp:string = str.substring(uIndex,sIndex).trim();
+      console.log(uIndex + " " + sIndex);
+      let temp: string = str.substring(uIndex, sIndex).trim();
       console.log(temp.trim());
       console.log(this.hexDecode(this.hexEncode(str)));
       console.log(this.hexDecode(this.hexEncode("\uD83D\uDE44")));
       console.log(this.hexDecode(this.hexEncode(temp)));
-      str.replace(str.substring(uIndex,sIndex),this.hexDecode(this.hexEncode(str.substring(uIndex,sIndex))));
+      str.replace(str.substring(uIndex, sIndex), this.hexDecode(this.hexEncode(str.substring(uIndex, sIndex))));
       console.log(str);
       break;
     }
@@ -154,22 +164,30 @@ export class HomecomponentComponent implements OnInit {
       let seo_title: string = eventData.text;
       // console.log(seo_title);
       let seo_desc: string = "";
-      if(eventData.hintsJSONArray){
-        let hints:string[] = JSON.parse(eventData.hintsJSONArray);
-        if(hints){
+      if (eventData.hintsJSONArray) {
+        let hints: string[] = JSON.parse(eventData.hintsJSONArray);
+        if (hints) {
           seo_desc = (hints[0]);
-          let count:number=1;
-          while(seo_desc.length<200 && count<hints.length){
-            seo_desc=seo_desc+" "+(hints[count]);
+          let count: number = 1;
+          while (seo_desc.length < 200 && count < hints.length) {
+            seo_desc = seo_desc + " " + (hints[count]);
             count++;
           }
+          seo_desc.replace(/([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g, '')
+          var div = document.createElement("div");
+          div.innerHTML = seo_desc;
+          seo_desc = div.textContent || div.innerText || seo_desc;
         }
       }
       let seo_keywords: string = eventData.hashtags;
       let seo_url: string = window.location.href;;
       let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
       if (eventData.photos && eventData.photos.length > 0) {
-        seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id;
+        if(this.isDev){
+          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
+        }else{
+          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
+        }
       }
       this.setTitle(seo_title);
       let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
