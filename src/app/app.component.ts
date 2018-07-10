@@ -10,16 +10,17 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var userAgent = navigator.userAgent || navigator.vendor;
+    if(typeof navigator != 'undefined'){
+      var userAgent = navigator.userAgent || navigator.vendor;
 
-    if (/android/i.test(userAgent)) {
-      window.location.href = "https://goo.gl/xcZT2a";
+      if (/android/i.test(userAgent)) {
+        window.location.href = "https://goo.gl/xcZT2a";
+      }
     }
-
-    // if (/iPad|iPhone|iPod/i.test(userAgent)) {
-    //    window.location.href = "https://goo.gl/fGGi8";
-    // }
-
+      // if (/iPad|iPhone|iPod/i.test(userAgent)) {
+      //    window.location.href = "https://goo.gl/fGGi8";
+      // }
+   
   }
 
 }
