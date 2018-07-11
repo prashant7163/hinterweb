@@ -90,7 +90,12 @@ export class HomecomponentComponent implements OnInit {
       if (userData && userData.profile) {
         seo_desc = userData.profile.place;
       }
-      let seo_url: string = window.location.href;
+      let seo_url: string = '';
+      if(isPlatformServer(this.platformId)){
+          
+      }else{
+        seo_url = window.location.href;
+      }
       let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
       if (userData) {
         if (this.isDev) {

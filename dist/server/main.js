@@ -473,7 +473,12 @@ var HomecomponentComponent = /** @class */ (function () {
             if (userData && userData.profile) {
                 seo_desc = userData.profile.place;
             }
-            var seo_url = window.location.href;
+            var seo_url = '';
+            if (common_1.isPlatformServer(this.platformId)) {
+            }
+            else {
+                seo_url = window.location.href;
+            }
             var seo_image = (application_interactor_1.ApplicationInteractor.seoUrl + "/assets/images/logo.png");
             if (userData) {
                 if (this.isDev) {
