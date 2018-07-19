@@ -21,6 +21,9 @@ export class AppModuleHttpService {
         if(isDev){
             baseUrl = this.baseUrl_dev;
         }
+        if(eventType.toLowerCase()=="tape"){
+            eventType = "moment";
+        }
         return this.http.get<any>((baseUrl + "/web/"+eventType+"/"+entryId),  {
             observe: 'response'
         });

@@ -53235,6 +53235,9 @@ var AppModuleHttpService = /** @class */ (function () {
         if (isDev) {
             baseUrl = this.baseUrl_dev;
         }
+        if (eventType.toLowerCase() == "tape") {
+            eventType = "moment";
+        }
         return this.http.get((baseUrl + "/web/" + eventType + "/" + entryId), {
             observe: 'response'
         });
