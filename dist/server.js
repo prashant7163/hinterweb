@@ -52711,6 +52711,18 @@ var HomecomponentComponent = /** @class */ (function () {
                     'name': 'twitter:title',
                     content: seo_title
                 });
+                this._meta.addTag({
+                    'name': 'twitter:card',
+                    content: 'summary'
+                });
+                this._meta.addTag({
+                    'name': 'twitter:site',
+                    content: '@Hinter_Social'
+                });
+                this._meta.addTag({
+                    'name': 'twitter:creator',
+                    content: '@Hinter_Social'
+                });
             }
             else {
                 var linkCanonical = application_interactor_1.ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
@@ -52733,6 +52745,12 @@ var HomecomponentComponent = /** @class */ (function () {
                 metaTwitterDescription.setAttribute("content", seo_desc);
                 var metaTwitterURL = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
                 metaTwitterURL.setAttribute("content", seo_url);
+                var metaTwitterCard = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:card', this.document);
+                metaTwitterCard.setAttribute("content", 'summary');
+                var metaTwitterSite = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:site', this.document);
+                metaTwitterSite.setAttribute("content", 'Hinter_Social');
+                var metaTwitterCreator = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:creator', this.document);
+                metaTwitterCreator.setAttribute("content", 'Hinter_Social');
             }
         }
     };
@@ -52864,6 +52882,18 @@ var HomecomponentComponent = /** @class */ (function () {
                     'name': 'twitter:title',
                     content: seo_title
                 });
+                this._meta.addTag({
+                    'name': 'twitter:card',
+                    content: 'summary'
+                });
+                this._meta.addTag({
+                    'name': 'twitter:site',
+                    content: '@Hinter_Social'
+                });
+                this._meta.addTag({
+                    'name': 'twitter:creator',
+                    content: '@Hinter_Social'
+                });
             }
             else {
                 var linkCanonical = application_interactor_1.ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
@@ -52888,6 +52918,12 @@ var HomecomponentComponent = /** @class */ (function () {
                 metaTwitterDescription.setAttribute("content", seo_desc);
                 var metaTwitterURL = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
                 metaTwitterURL.setAttribute("content", seo_url);
+                var metaTwitterCard = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:card', this.document);
+                metaTwitterCard.setAttribute("content", 'summary');
+                var metaTwitterSite = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:site', this.document);
+                metaTwitterSite.setAttribute("content", 'Hinter_Social');
+                var metaTwitterCreator = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:creator', this.document);
+                metaTwitterCreator.setAttribute("content", 'Hinter_Social');
             }
         }
     };

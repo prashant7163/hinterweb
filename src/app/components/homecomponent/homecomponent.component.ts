@@ -134,6 +134,18 @@ export class HomecomponentComponent implements OnInit {
           'name': 'twitter:title',
           content: seo_title
         });
+        this._meta.addTag({
+          'name': 'twitter:card',
+          content: 'summary'
+        });
+        this._meta.addTag({
+          'name': 'twitter:site',
+          content: '@Hinter_Social'
+        });
+        this._meta.addTag({
+          'name': 'twitter:creator',
+          content: '@Hinter_Social'
+        });
       } else {
         let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
         linkCanonical.setAttribute("href", seo_url);
@@ -155,6 +167,12 @@ export class HomecomponentComponent implements OnInit {
         metaTwitterDescription.setAttribute("content", seo_desc);
         let metaTwitterURL: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
         metaTwitterURL.setAttribute("content", seo_url);
+        let metaTwitterCard: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:card', this.document);
+        metaTwitterCard.setAttribute("content", 'summary');
+        let metaTwitterSite: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:site', this.document);
+        metaTwitterSite.setAttribute("content", 'Hinter_Social');
+        let metaTwitterCreator: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:creator', this.document);
+        metaTwitterCreator.setAttribute("content", 'Hinter_Social');
       }
 
     }
@@ -290,6 +308,18 @@ export class HomecomponentComponent implements OnInit {
           'name': 'twitter:title',
           content: seo_title
         });
+        this._meta.addTag({
+          'name': 'twitter:card',
+          content: 'summary'
+        });
+        this._meta.addTag({
+          'name': 'twitter:site',
+          content: '@Hinter_Social'
+        });
+        this._meta.addTag({
+          'name': 'twitter:creator',
+          content: '@Hinter_Social'
+        });
       } else {
         let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
         linkCanonical.setAttribute("href", seo_url);
@@ -313,6 +343,12 @@ export class HomecomponentComponent implements OnInit {
         metaTwitterDescription.setAttribute("content", seo_desc);
         let metaTwitterURL: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
         metaTwitterURL.setAttribute("content", seo_url);
+        let metaTwitterCard: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:card', this.document);
+        metaTwitterCard.setAttribute("content", 'summary');
+        let metaTwitterSite: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:site', this.document);
+        metaTwitterSite.setAttribute("content", 'Hinter_Social');
+        let metaTwitterCreator: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:creator', this.document);
+        metaTwitterCreator.setAttribute("content", 'Hinter_Social');
       }
     }
 
