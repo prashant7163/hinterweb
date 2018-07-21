@@ -111,7 +111,7 @@ export class HomecomponentComponent implements OnInit {
           content: seo_title
         });
         this._meta.addTag({
-          'property': 'og:desc',
+          'property': 'og:description',
           content: seo_desc
         });
         this._meta.addTag({
@@ -120,10 +120,6 @@ export class HomecomponentComponent implements OnInit {
         });
         this._meta.addTag({
           'name': 'twitter:image',
-          content: seo_image
-        });
-        this._meta.addTag({
-          'name': 'twitter:image:src',
           content: seo_image
         });
         this._meta.addTag({
@@ -136,7 +132,7 @@ export class HomecomponentComponent implements OnInit {
         });
         this._meta.addTag({
           'name': 'twitter:card',
-          content: 'summary'
+          content: 'summary_large_image'
         });
         this._meta.addTag({
           'name': 'twitter:site',
@@ -159,8 +155,6 @@ export class HomecomponentComponent implements OnInit {
         metaOGImage.setAttribute("content", seo_image);
         let metaTwitterImage: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:image', this.document);
         metaTwitterImage.setAttribute("content", seo_image);
-        let metaTwitterImageSrc: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:image:src', this.document);
-        metaTwitterImageSrc.setAttribute("content", seo_image);
         let metaTwitterTitle: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:title', this.document);
         metaTwitterTitle.setAttribute("content", seo_title);
         let metaTwitterDescription: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:description', this.document);
@@ -168,7 +162,7 @@ export class HomecomponentComponent implements OnInit {
         let metaTwitterURL: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
         metaTwitterURL.setAttribute("content", seo_url);
         let metaTwitterCard: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:card', this.document);
-        metaTwitterCard.setAttribute("content", 'summary');
+        metaTwitterCard.setAttribute("content", 'summary_large_image');
         let metaTwitterSite: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:site', this.document);
         metaTwitterSite.setAttribute("content", 'Hinter_Social');
         let metaTwitterCreator: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:creator', this.document);
@@ -285,7 +279,7 @@ export class HomecomponentComponent implements OnInit {
           content: seo_title
         });
         this._meta.addTag({
-          'property': 'og:desc',
+          'property': 'og:description',
           content: seo_desc
         });
         this._meta.addTag({
@@ -294,10 +288,6 @@ export class HomecomponentComponent implements OnInit {
         });
         this._meta.addTag({
           'name': 'twitter:image',
-          content: seo_image
-        });
-        this._meta.addTag({
-          'name': 'twitter:image:src',
           content: seo_image
         });
         this._meta.addTag({
@@ -310,7 +300,7 @@ export class HomecomponentComponent implements OnInit {
         });
         this._meta.addTag({
           'name': 'twitter:card',
-          content: 'summary'
+          content: 'summary_large_image'
         });
         this._meta.addTag({
           'name': 'twitter:site',
@@ -335,8 +325,6 @@ export class HomecomponentComponent implements OnInit {
         metaOGImage.setAttribute("content", seo_image);
         let metaTwitterImage: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:image', this.document);
         metaTwitterImage.setAttribute("content", seo_image);
-        let metaTwitterImageSrc: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:image:src', this.document);
-        metaTwitterImageSrc.setAttribute("content", seo_image);
         let metaTwitterTitle: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:title', this.document);
         metaTwitterTitle.setAttribute("content", seo_title);
         let metaTwitterDescription: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:description', this.document);
@@ -344,7 +332,7 @@ export class HomecomponentComponent implements OnInit {
         let metaTwitterURL: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
         metaTwitterURL.setAttribute("content", seo_url);
         let metaTwitterCard: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:card', this.document);
-        metaTwitterCard.setAttribute("content", 'summary');
+        metaTwitterCard.setAttribute("content", 'summary_large_image');
         let metaTwitterSite: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:site', this.document);
         metaTwitterSite.setAttribute("content", 'Hinter_Social');
         let metaTwitterCreator: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:creator', this.document);
