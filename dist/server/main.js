@@ -664,14 +664,6 @@ var HomecomponentComponent = /** @class */ (function () {
                     content: seo_desc
                 });
                 this._meta.addTag({
-                    'property': 'og:image',
-                    content: seo_image
-                });
-                this._meta.addTag({
-                    'name': 'twitter:image',
-                    content: seo_image
-                });
-                this._meta.addTag({
                     'name': 'twitter:description',
                     content: seo_desc
                 });
@@ -699,6 +691,20 @@ var HomecomponentComponent = /** @class */ (function () {
                     this._meta.addTag({
                         'name': 'twitter:image',
                         content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+                    });
+                    this._meta.addTag({
+                        'property': 'og:image',
+                        content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+                    });
+                }
+                else {
+                    this._meta.addTag({
+                        'property': 'og:image',
+                        content: seo_image
+                    });
+                    this._meta.addTag({
+                        'name': 'twitter:image',
+                        content: seo_image
                     });
                 }
             }
