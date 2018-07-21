@@ -52688,7 +52688,7 @@ var HomecomponentComponent = /** @class */ (function () {
                     content: seo_title
                 });
                 this._meta.addTag({
-                    'property': 'og:desc',
+                    'property': 'og:description',
                     content: seo_desc
                 });
                 this._meta.addTag({
@@ -52697,10 +52697,6 @@ var HomecomponentComponent = /** @class */ (function () {
                 });
                 this._meta.addTag({
                     'name': 'twitter:image',
-                    content: seo_image
-                });
-                this._meta.addTag({
-                    'name': 'twitter:image:src',
                     content: seo_image
                 });
                 this._meta.addTag({
@@ -52713,7 +52709,7 @@ var HomecomponentComponent = /** @class */ (function () {
                 });
                 this._meta.addTag({
                     'name': 'twitter:card',
-                    content: 'summary'
+                    content: 'summary_large_image'
                 });
                 this._meta.addTag({
                     'name': 'twitter:site',
@@ -52737,8 +52733,6 @@ var HomecomponentComponent = /** @class */ (function () {
                 metaOGImage.setAttribute("content", seo_image);
                 var metaTwitterImage = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:image', this.document);
                 metaTwitterImage.setAttribute("content", seo_image);
-                var metaTwitterImageSrc = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:image:src', this.document);
-                metaTwitterImageSrc.setAttribute("content", seo_image);
                 var metaTwitterTitle = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:title', this.document);
                 metaTwitterTitle.setAttribute("content", seo_title);
                 var metaTwitterDescription = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:description', this.document);
@@ -52746,7 +52740,7 @@ var HomecomponentComponent = /** @class */ (function () {
                 var metaTwitterURL = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
                 metaTwitterURL.setAttribute("content", seo_url);
                 var metaTwitterCard = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:card', this.document);
-                metaTwitterCard.setAttribute("content", 'summary');
+                metaTwitterCard.setAttribute("content", 'summary_large_image');
                 var metaTwitterSite = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:site', this.document);
                 metaTwitterSite.setAttribute("content", 'Hinter_Social');
                 var metaTwitterCreator = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:creator', this.document);
@@ -52859,7 +52853,7 @@ var HomecomponentComponent = /** @class */ (function () {
                     content: seo_title
                 });
                 this._meta.addTag({
-                    'property': 'og:desc',
+                    'property': 'og:description',
                     content: seo_desc
                 });
                 this._meta.addTag({
@@ -52871,11 +52865,11 @@ var HomecomponentComponent = /** @class */ (function () {
                     content: seo_image
                 });
                 this._meta.addTag({
-                    'name': 'twitter:image:src',
-                    content: seo_image
+                    'name': 'twitter:description',
+                    content: seo_desc
                 });
                 this._meta.addTag({
-                    'name': 'twitter:description',
+                    'name': 'twitter:image:alt',
                     content: seo_desc
                 });
                 this._meta.addTag({
@@ -52884,7 +52878,7 @@ var HomecomponentComponent = /** @class */ (function () {
                 });
                 this._meta.addTag({
                     'name': 'twitter:card',
-                    content: 'summary'
+                    content: 'summary_large_image'
                 });
                 this._meta.addTag({
                     'name': 'twitter:site',
@@ -52894,6 +52888,12 @@ var HomecomponentComponent = /** @class */ (function () {
                     'name': 'twitter:creator',
                     content: '@Hinter_Social'
                 });
+                if (eventData.id == 9587) {
+                    this._meta.addTag({
+                        'name': 'twitter:image',
+                        content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+                    });
+                }
             }
             else {
                 var linkCanonical = application_interactor_1.ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
@@ -52910,8 +52910,6 @@ var HomecomponentComponent = /** @class */ (function () {
                 metaOGImage.setAttribute("content", seo_image);
                 var metaTwitterImage = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:image', this.document);
                 metaTwitterImage.setAttribute("content", seo_image);
-                var metaTwitterImageSrc = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:image:src', this.document);
-                metaTwitterImageSrc.setAttribute("content", seo_image);
                 var metaTwitterTitle = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:title', this.document);
                 metaTwitterTitle.setAttribute("content", seo_title);
                 var metaTwitterDescription = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:description', this.document);
@@ -52919,7 +52917,7 @@ var HomecomponentComponent = /** @class */ (function () {
                 var metaTwitterURL = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
                 metaTwitterURL.setAttribute("content", seo_url);
                 var metaTwitterCard = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:card', this.document);
-                metaTwitterCard.setAttribute("content", 'summary');
+                metaTwitterCard.setAttribute("content", 'summary_large_image');
                 var metaTwitterSite = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:site', this.document);
                 metaTwitterSite.setAttribute("content", 'Hinter_Social');
                 var metaTwitterCreator = application_interactor_1.ApplicationInteractor.getOrCreateMetaElement('twitter:creator', this.document);

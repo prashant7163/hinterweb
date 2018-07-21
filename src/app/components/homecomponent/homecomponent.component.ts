@@ -295,6 +295,10 @@ export class HomecomponentComponent implements OnInit {
           content: seo_desc
         });
         this._meta.addTag({
+          'name': 'twitter:image:alt',
+          content: seo_desc
+        });
+        this._meta.addTag({
           'name': 'twitter:title',
           content: seo_title
         });
@@ -310,6 +314,12 @@ export class HomecomponentComponent implements OnInit {
           'name': 'twitter:creator',
           content: '@Hinter_Social'
         });
+        if(eventData.id==9587){
+          this._meta.addTag({
+            'name': 'twitter:image',
+            content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+          });
+        }
       } else {
         let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
         linkCanonical.setAttribute("href", seo_url);
