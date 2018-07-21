@@ -282,13 +282,16 @@ export class HomecomponentComponent implements OnInit {
           'property': 'og:description',
           content: seo_desc
         });
-       
         this._meta.addTag({
-          'name': 'twitter:description',
-          content: seo_desc
+          'property': 'og:image',
+          content: seo_image
         });
         this._meta.addTag({
-          'name': 'twitter:image:alt',
+          'name': 'twitter:image',
+          content: seo_image
+        });
+        this._meta.addTag({
+          'name': 'twitter:description',
           content: seo_desc
         });
         this._meta.addTag({
@@ -307,25 +310,6 @@ export class HomecomponentComponent implements OnInit {
           'name': 'twitter:creator',
           content: '@Hinter_Social'
         });
-        if(eventData.id==9587){
-          this._meta.addTag({
-            'name': 'twitter:image',
-            content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
-          });
-          this._meta.addTag({
-            'property': 'og:image',
-            content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
-          });
-        }else{
-          this._meta.addTag({
-            'property': 'og:image',
-            content: seo_image
-          });
-          this._meta.addTag({
-            'name': 'twitter:image',
-            content: seo_image
-          });
-        }
       } else {
         let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
         linkCanonical.setAttribute("href", seo_url);
