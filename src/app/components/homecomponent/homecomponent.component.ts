@@ -310,11 +310,11 @@ export class HomecomponentComponent implements OnInit {
         if(eventData.id==9587){
           this._meta.addTag({
             'name': 'twitter:image',
-            content: "http://hinter.sg/assets/images/videoframe.jpg"
+            content: "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/assets/images/videoframe.jpg"
           });
           this._meta.addTag({
             'property': 'og:image',
-            content: "http://hinter.sg/assets/images/videoframe.jpg"
+            content: "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/assets/images/videoframe.jpg"
           });
         }else{
           this._meta.addTag({
