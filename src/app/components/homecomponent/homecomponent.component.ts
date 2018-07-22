@@ -99,9 +99,9 @@ export class HomecomponentComponent implements OnInit {
       let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
       if (userData) {
         if (this.isDev) {
-          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
         } else {
-          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
         }
       }
       this.setTitle(seo_title);
@@ -267,9 +267,9 @@ export class HomecomponentComponent implements OnInit {
       let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
       if (eventData.photos && eventData.photos.length > 0) {
         if (this.isDev) {
-          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
+          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
         } else {
-          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
+          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
         }
       }
       this.setTitle(seo_title);
@@ -307,16 +307,16 @@ export class HomecomponentComponent implements OnInit {
           'name': 'twitter:creator',
           content: '@Hinter_Social'
         });
-        if(eventData.id==9587){
-          this._meta.addTag({
-            'name': 'twitter:image',
-            content: "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/8931/image.jpg"
-          });
-          this._meta.addTag({
-            'property': 'og:image',
-            content: "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/8931/image.jpg"
-          });
-        }else{
+        // if(eventData.id==9587){
+        //   this._meta.addTag({
+        //     'name': 'twitter:image',
+        //     content: "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/8931/image.jpg"
+        //   });
+        //   this._meta.addTag({
+        //     'property': 'og:image',
+        //     content: "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/8931/image.jpg"
+        //   });
+        // }else{
           this._meta.addTag({
             'property': 'og:image',
             content: seo_image
@@ -325,7 +325,7 @@ export class HomecomponentComponent implements OnInit {
             'name': 'twitter:image',
             content: seo_image
           });
-        }
+        // }
       } else {
         let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
         linkCanonical.setAttribute("href", seo_url);
