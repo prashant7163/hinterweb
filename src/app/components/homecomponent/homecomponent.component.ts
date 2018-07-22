@@ -267,9 +267,9 @@ export class HomecomponentComponent implements OnInit {
       let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
       if (eventData.photos && eventData.photos.length > 0) {
         if (this.isDev) {
-          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id ;
+          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
         } else {
-          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id ;
+          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
         }
       }
       this.setTitle(seo_title);
