@@ -98,10 +98,15 @@ export class HomecomponentComponent implements OnInit {
       }
       let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
       if (userData) {
+        // if (this.isDev) {
+        //   seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+        // } else {
+        //   seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+        // }
         if (this.isDev) {
-          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+          seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/user/" + userData.email;
         } else {
-          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+          seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/user/" + userData.email;
         }
       }
       this.setTitle(seo_title);
@@ -266,11 +271,17 @@ export class HomecomponentComponent implements OnInit {
       }
       let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
       if (eventData.photos && eventData.photos.length > 0) {
+        // if (this.isDev) {
+        //   seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
+        // } else {
+        //   seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
+        // }
         if (this.isDev) {
-          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
+          seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/entry/"  + eventData.photos[0].id ;
         } else {
-          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
+          seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/entry/"  + eventData.photos[0].id ;
         }
+        
       }
       this.setTitle(seo_title);
       if (isPlatformServer(this.platformId)) {
