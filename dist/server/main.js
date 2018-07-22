@@ -647,10 +647,10 @@ var HomecomponentComponent = /** @class */ (function () {
             var seo_image = (application_interactor_1.ApplicationInteractor.seoUrl + "/assets/images/logo.png");
             if (eventData.photos && eventData.photos.length > 0) {
                 if (this.isDev) {
-                    seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
+                    seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id;
                 }
                 else {
-                    seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
+                    seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id;
                 }
             }
             this.setTitle(seo_title);
@@ -664,15 +664,11 @@ var HomecomponentComponent = /** @class */ (function () {
                     content: seo_desc
                 });
                 this._meta.addTag({
-                    'property': 'og:image',
-                    content: seo_image
-                });
-                this._meta.addTag({
-                    'name': 'twitter:image',
-                    content: seo_image
-                });
-                this._meta.addTag({
                     'name': 'twitter:description',
+                    content: seo_desc
+                });
+                this._meta.addTag({
+                    'name': 'twitter:image:alt',
                     content: seo_desc
                 });
                 this._meta.addTag({
@@ -691,6 +687,26 @@ var HomecomponentComponent = /** @class */ (function () {
                     'name': 'twitter:creator',
                     content: '@Hinter_Social'
                 });
+                if (eventData.id == 9587) {
+                    this._meta.addTag({
+                        'name': 'twitter:image',
+                        content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+                    });
+                    this._meta.addTag({
+                        'property': 'og:image',
+                        content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+                    });
+                }
+                else {
+                    this._meta.addTag({
+                        'property': 'og:image',
+                        content: seo_image
+                    });
+                    this._meta.addTag({
+                        'name': 'twitter:image',
+                        content: seo_image
+                    });
+                }
             }
             else {
                 var linkCanonical = application_interactor_1.ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
@@ -1115,7 +1131,7 @@ exports.LAZY_MODULE_MAP = {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /media/arjun/E/Work/hinter/hinterwebapp/src/main.server.ts */"./src/main.server.ts");
+module.exports = __webpack_require__(/*! /home/ec2-user/data/hinterweb/src/main.server.ts */"./src/main.server.ts");
 
 
 /***/ }),
