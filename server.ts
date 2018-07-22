@@ -8,7 +8,9 @@ import { join } from 'path';
  
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
- 
+var fs = require('fs'); 
+var request = require('request');
+
 // Express server
 const app = express();
  
@@ -36,6 +38,25 @@ app.set('views', join(DIST_FOLDER, 'hinterwebapp'));
 // TODO: implement data requests securely
 app.get('/api/*', (req, res) => {
   res.status(404).send('data requests are not supported');
+});
+
+app.get('/image/:type/:id', (req, res) => {
+	console.log("image url called, type="+req.params.type+", id="+req.params.id);
+ 	var URL = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/9610/thumb/image.jpg";
+        if(req.params.type && req.params.type=='entry'){
+	  URL = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + req.params.id + "/thumb/image.jpg";
+	}else if(req.params.type && req.params.type=='user'){
+	  URL = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + req.params.id + "&dpTime=0";
+	}else{
+	  res.status(404).send('invalid url');
+	  return;
+	}
+	request.get(URL, {encoding:'binary'},function(error, response){
+             res.writeHead(200, {'Content-Type': 'image/jpeg', 'Cache-Control': 'no-cache' });
+             res.end(response.body, 'binary');
+        });
+
+  //res.status(200).send('images supported');
 });
  
 // Server static files from /hinterwebapp

@@ -482,10 +482,10 @@ var HomecomponentComponent = /** @class */ (function () {
             var seo_image = (application_interactor_1.ApplicationInteractor.seoUrl + "/assets/images/logo.png");
             if (userData) {
                 if (this.isDev) {
-                    seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+                    seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
                 }
                 else {
-                    seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+                    seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
                 }
             }
             this.setTitle(seo_title);
@@ -647,10 +647,10 @@ var HomecomponentComponent = /** @class */ (function () {
             var seo_image = (application_interactor_1.ApplicationInteractor.seoUrl + "/assets/images/logo.png");
             if (eventData.photos && eventData.photos.length > 0) {
                 if (this.isDev) {
-                    seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id;
+                    seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
                 }
                 else {
-                    seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id;
+                    seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
                 }
             }
             this.setTitle(seo_title);
@@ -687,26 +687,25 @@ var HomecomponentComponent = /** @class */ (function () {
                     'name': 'twitter:creator',
                     content: '@Hinter_Social'
                 });
-                if (eventData.id == 9587) {
-                    this._meta.addTag({
-                        'name': 'twitter:image',
-                        content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
-                    });
-                    this._meta.addTag({
-                        'property': 'og:image',
-                        content: "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
-                    });
-                }
-                else {
-                    this._meta.addTag({
-                        'property': 'og:image',
-                        content: seo_image
-                    });
-                    this._meta.addTag({
-                        'name': 'twitter:image',
-                        content: seo_image
-                    });
-                }
+                // if(eventData.id==9587){
+                //   this._meta.addTag({
+                //     'name': 'twitter:image',
+                //     content: "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/8931/image.jpg"
+                //   });
+                //   this._meta.addTag({
+                //     'property': 'og:image',
+                //     content: "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/8931/image.jpg"
+                //   });
+                // }else{
+                this._meta.addTag({
+                    'property': 'og:image',
+                    content: seo_image
+                });
+                this._meta.addTag({
+                    'name': 'twitter:image',
+                    content: seo_image
+                });
+                // }
             }
             else {
                 var linkCanonical = application_interactor_1.ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);

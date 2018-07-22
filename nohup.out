@@ -102287,3 +102287,1720 @@ ERROR TypeError: Cannot read property 'length' of null
     at MapSubscriber.Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
     at BehaviorSubject._subscribe (/home/ec2-user/data/hinterweb/dist/server.js:21933:24)
     at BehaviorSubject.Observable._trySubscribe (/home/ec2-user/data/hinterweb/dist/server.js:20484:25)
+Node server listening on http://localhost:80
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Node server listening on http://localhost:80
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+ERROR TypeError: Cannot read property 'length' of null
+    at HomecomponentComponent../src/app/components/homecomponent/homecomponent.component.ts.HomecomponentComponent.a2b (/home/ec2-user/data/hinterweb/dist/server.js:52800:83)
+    at SafeSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:52605:28)
+    at SafeSubscriber.__tryOrUnsub (/home/ec2-user/data/hinterweb/dist/server.js:20794:16)
+    at SafeSubscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20732:22)
+    at Subscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:20676:26)
+    at Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at MapSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:23469:26)
+    at MapSubscriber.Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at BehaviorSubject._subscribe (/home/ec2-user/data/hinterweb/dist/server.js:21933:24)
+    at BehaviorSubject.Observable._trySubscribe (/home/ec2-user/data/hinterweb/dist/server.js:20484:25)
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+¾'^¡úÚ #¦
+[ '¾\'^¡úÚ\u0000#¦' ]
+Running on the server with appId=hinterwebapp
+ERROR { Error: Uncaught (in promise): Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26)
+    at resolvePromise (/home/ec2-user/data/hinterweb/dist/server.js:936:31)
+    at resolvePromise (/home/ec2-user/data/hinterweb/dist/server.js:893:17)
+    at /home/ec2-user/data/hinterweb/dist/server.js:995:17
+    at ZoneDelegate.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:543:31)
+    at Object.onInvokeTask (/home/ec2-user/data/hinterweb/dist/server.js:7505:33)
+    at ZoneDelegate.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:542:36)
+    at Zone.runTask (/home/ec2-user/data/hinterweb/dist/server.js:310:47)
+    at drainMicroTaskQueue (/home/ec2-user/data/hinterweb/dist/server.js:717:35)
+    at ZoneTask.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:622:21)
+    at ZoneTask.invoke (/home/ec2-user/data/hinterweb/dist/server.js:607:48)
+  rejection: Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26),
+  promise: 
+   ZoneAwarePromise {
+     __zone_symbol__state: 0,
+     __zone_symbol__value: Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26) },
+  zone: 
+   Zone {
+     _properties: { isAngularZone: true },
+     _parent: 
+      Zone {
+        _properties: {},
+        _parent: null,
+        _name: '<root>',
+        _zoneDelegate: [Object] },
+     _name: 'angular',
+     _zoneDelegate: 
+      ZoneDelegate {
+        _taskCounts: [Object],
+        zone: [Circular],
+        _parentDelegate: [Object],
+        _forkZS: null,
+        _forkDlgt: null,
+        _forkCurrZone: [Object],
+        _interceptZS: null,
+        _interceptDlgt: null,
+        _interceptCurrZone: [Object],
+        _invokeZS: [Object],
+        _invokeDlgt: [Object],
+        _invokeCurrZone: [Circular],
+        _handleErrorZS: [Object],
+        _handleErrorDlgt: [Object],
+        _handleErrorCurrZone: [Circular],
+        _scheduleTaskZS: [Object],
+        _scheduleTaskDlgt: [Object],
+        _scheduleTaskCurrZone: [Circular],
+        _invokeTaskZS: [Object],
+        _invokeTaskDlgt: [Object],
+        _invokeTaskCurrZone: [Circular],
+        _cancelTaskZS: [Object],
+        _cancelTaskDlgt: [Object],
+        _cancelTaskCurrZone: [Circular],
+        _hasTaskZS: [Object],
+        _hasTaskDlgt: [Object],
+        _hasTaskDlgtOwner: [Circular],
+        _hasTaskCurrZone: [Circular] } },
+  task: 
+   ZoneTask {
+     _zone: 
+      Zone {
+        _properties: [Object],
+        _parent: [Object],
+        _name: 'angular',
+        _zoneDelegate: [Object] },
+     runCount: 0,
+     _zoneDelegates: null,
+     _state: 'notScheduled',
+     type: 'microTask',
+     source: 'Promise.then',
+     data: 
+      ZoneAwarePromise {
+        __zone_symbol__state: 0,
+        __zone_symbol__value: Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26) },
+     scheduleFn: undefined,
+     cancelFn: null,
+     callback: [Function],
+     invoke: [Function] } }
+Node server listening on http://localhost:80
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+®è¶ -Æ
+[ '®è¶\u0000-Æ' ]
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+ERROR { Error: Uncaught (in promise): Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26)
+    at resolvePromise (/home/ec2-user/data/hinterweb/dist/server.js:936:31)
+    at resolvePromise (/home/ec2-user/data/hinterweb/dist/server.js:893:17)
+    at /home/ec2-user/data/hinterweb/dist/server.js:995:17
+    at ZoneDelegate.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:543:31)
+    at Object.onInvokeTask (/home/ec2-user/data/hinterweb/dist/server.js:7505:33)
+    at ZoneDelegate.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:542:36)
+    at Zone.runTask (/home/ec2-user/data/hinterweb/dist/server.js:310:47)
+    at drainMicroTaskQueue (/home/ec2-user/data/hinterweb/dist/server.js:717:35)
+    at ZoneTask.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:622:21)
+    at ZoneTask.invoke (/home/ec2-user/data/hinterweb/dist/server.js:607:48)
+  rejection: Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26),
+  promise: 
+   ZoneAwarePromise {
+     __zone_symbol__state: 0,
+     __zone_symbol__value: Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26) },
+  zone: 
+   Zone {
+     _properties: { isAngularZone: true },
+     _parent: 
+      Zone {
+        _properties: {},
+        _parent: null,
+        _name: '<root>',
+        _zoneDelegate: [Object] },
+     _name: 'angular',
+     _zoneDelegate: 
+      ZoneDelegate {
+        _taskCounts: [Object],
+        zone: [Circular],
+        _parentDelegate: [Object],
+        _forkZS: null,
+        _forkDlgt: null,
+        _forkCurrZone: [Object],
+        _interceptZS: null,
+        _interceptDlgt: null,
+        _interceptCurrZone: [Object],
+        _invokeZS: [Object],
+        _invokeDlgt: [Object],
+        _invokeCurrZone: [Circular],
+        _handleErrorZS: [Object],
+        _handleErrorDlgt: [Object],
+        _handleErrorCurrZone: [Circular],
+        _scheduleTaskZS: [Object],
+        _scheduleTaskDlgt: [Object],
+        _scheduleTaskCurrZone: [Circular],
+        _invokeTaskZS: [Object],
+        _invokeTaskDlgt: [Object],
+        _invokeTaskCurrZone: [Circular],
+        _cancelTaskZS: [Object],
+        _cancelTaskDlgt: [Object],
+        _cancelTaskCurrZone: [Circular],
+        _hasTaskZS: [Object],
+        _hasTaskDlgt: [Object],
+        _hasTaskDlgtOwner: [Circular],
+        _hasTaskCurrZone: [Circular] } },
+  task: 
+   ZoneTask {
+     _zone: 
+      Zone {
+        _properties: [Object],
+        _parent: [Object],
+        _name: 'angular',
+        _zoneDelegate: [Object] },
+     runCount: 0,
+     _zoneDelegates: null,
+     _state: 'notScheduled',
+     type: 'microTask',
+     source: 'Promise.then',
+     data: 
+      ZoneAwarePromise {
+        __zone_symbol__state: 0,
+        __zone_symbol__value: Error: Cannot match any routes. URL Segment: 'assets/images/tiger.jpg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26) },
+     scheduleFn: undefined,
+     cancelFn: null,
+     callback: [Function],
+     invoke: [Function] } }
+Running on the server with appId=hinterwebapp
+ERROR { Error: Uncaught (in promise): Error: Cannot match any routes. URL Segment: 'assets/images/videoframe.jpeg'
+Error: Cannot match any routes. URL Segment: 'assets/images/videoframe.jpeg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26)
+    at resolvePromise (/home/ec2-user/data/hinterweb/dist/server.js:936:31)
+    at resolvePromise (/home/ec2-user/data/hinterweb/dist/server.js:893:17)
+    at /home/ec2-user/data/hinterweb/dist/server.js:995:17
+    at ZoneDelegate.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:543:31)
+    at Object.onInvokeTask (/home/ec2-user/data/hinterweb/dist/server.js:7505:33)
+    at ZoneDelegate.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:542:36)
+    at Zone.runTask (/home/ec2-user/data/hinterweb/dist/server.js:310:47)
+    at drainMicroTaskQueue (/home/ec2-user/data/hinterweb/dist/server.js:717:35)
+    at ZoneTask.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:622:21)
+    at ZoneTask.invoke (/home/ec2-user/data/hinterweb/dist/server.js:607:48)
+  rejection: Error: Cannot match any routes. URL Segment: 'assets/images/videoframe.jpeg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26),
+  promise: 
+   ZoneAwarePromise {
+     __zone_symbol__state: 0,
+     __zone_symbol__value: Error: Cannot match any routes. URL Segment: 'assets/images/videoframe.jpeg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26) },
+  zone: 
+   Zone {
+     _properties: { isAngularZone: true },
+     _parent: 
+      Zone {
+        _properties: {},
+        _parent: null,
+        _name: '<root>',
+        _zoneDelegate: [Object] },
+     _name: 'angular',
+     _zoneDelegate: 
+      ZoneDelegate {
+        _taskCounts: [Object],
+        zone: [Circular],
+        _parentDelegate: [Object],
+        _forkZS: null,
+        _forkDlgt: null,
+        _forkCurrZone: [Object],
+        _interceptZS: null,
+        _interceptDlgt: null,
+        _interceptCurrZone: [Object],
+        _invokeZS: [Object],
+        _invokeDlgt: [Object],
+        _invokeCurrZone: [Circular],
+        _handleErrorZS: [Object],
+        _handleErrorDlgt: [Object],
+        _handleErrorCurrZone: [Circular],
+        _scheduleTaskZS: [Object],
+        _scheduleTaskDlgt: [Object],
+        _scheduleTaskCurrZone: [Circular],
+        _invokeTaskZS: [Object],
+        _invokeTaskDlgt: [Object],
+        _invokeTaskCurrZone: [Circular],
+        _cancelTaskZS: [Object],
+        _cancelTaskDlgt: [Object],
+        _cancelTaskCurrZone: [Circular],
+        _hasTaskZS: [Object],
+        _hasTaskDlgt: [Object],
+        _hasTaskDlgtOwner: [Circular],
+        _hasTaskCurrZone: [Circular] } },
+  task: 
+   ZoneTask {
+     _zone: 
+      Zone {
+        _properties: [Object],
+        _parent: [Object],
+        _name: 'angular',
+        _zoneDelegate: [Object] },
+     runCount: 0,
+     _zoneDelegates: null,
+     _state: 'notScheduled',
+     type: 'microTask',
+     source: 'Promise.then',
+     data: 
+      ZoneAwarePromise {
+        __zone_symbol__state: 0,
+        __zone_symbol__value: Error: Cannot match any routes. URL Segment: 'assets/images/videoframe.jpeg'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121656:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121637:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26) },
+     scheduleFn: undefined,
+     cancelFn: null,
+     callback: [Function],
+     invoke: [Function] } }
+Node server listening on http://localhost:80
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+ERROR TypeError: Cannot read property 'length' of null
+    at HomecomponentComponent../src/app/components/homecomponent/homecomponent.component.ts.HomecomponentComponent.a2b (/home/ec2-user/data/hinterweb/dist/server.js:52800:83)
+    at SafeSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:52605:28)
+    at SafeSubscriber.__tryOrUnsub (/home/ec2-user/data/hinterweb/dist/server.js:20794:16)
+    at SafeSubscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20732:22)
+    at Subscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:20676:26)
+    at Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at MapSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:23469:26)
+    at MapSubscriber.Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at BehaviorSubject._subscribe (/home/ec2-user/data/hinterweb/dist/server.js:21933:24)
+    at BehaviorSubject.Observable._trySubscribe (/home/ec2-user/data/hinterweb/dist/server.js:20484:25)
+Running on the server with appId=hinterwebapp
+ERROR TypeError: Cannot read property 'length' of null
+    at HomecomponentComponent../src/app/components/homecomponent/homecomponent.component.ts.HomecomponentComponent.a2b (/home/ec2-user/data/hinterweb/dist/server.js:52800:83)
+    at SafeSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:52605:28)
+    at SafeSubscriber.__tryOrUnsub (/home/ec2-user/data/hinterweb/dist/server.js:20794:16)
+    at SafeSubscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20732:22)
+    at Subscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:20676:26)
+    at Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at MapSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:23469:26)
+    at MapSubscriber.Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at BehaviorSubject._subscribe (/home/ec2-user/data/hinterweb/dist/server.js:21933:24)
+    at BehaviorSubject.Observable._trySubscribe (/home/ec2-user/data/hinterweb/dist/server.js:20484:25)
+Node server listening on http://localhost:80
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Node server listening on http://localhost:80
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/5887
+[ 'milestone', '5887' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/5887',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 5887',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9546
+[ 'milestone', '9546' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9546',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9546',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9548
+[ 'milestone', '9548' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9548',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9548',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9548
+[ 'milestone', '9548' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9548',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9548',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9548
+[ 'milestone', '9548' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9548',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9548',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9548
+[ 'milestone', '9548' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9548',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9548',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9548
+[ 'milestone', '9548' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9548',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9548',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9548
+[ 'milestone', '9548' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9548',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9548',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+ERROR TypeError: Cannot read property 'length' of null
+    at HomecomponentComponent../src/app/components/homecomponent/homecomponent.component.ts.HomecomponentComponent.a2b (/home/ec2-user/data/hinterweb/dist/server.js:52800:83)
+    at SafeSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:52605:28)
+    at SafeSubscriber.__tryOrUnsub (/home/ec2-user/data/hinterweb/dist/server.js:20794:16)
+    at SafeSubscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20732:22)
+    at Subscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:20676:26)
+    at Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at MapSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:23469:26)
+    at MapSubscriber.Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at BehaviorSubject._subscribe (/home/ec2-user/data/hinterweb/dist/server.js:21933:24)
+    at BehaviorSubject.Observable._trySubscribe (/home/ec2-user/data/hinterweb/dist/server.js:20484:25)
+Running on the server with appId=hinterwebapp
+ERROR TypeError: Cannot read property 'length' of null
+    at HomecomponentComponent../src/app/components/homecomponent/homecomponent.component.ts.HomecomponentComponent.a2b (/home/ec2-user/data/hinterweb/dist/server.js:52800:83)
+    at SafeSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:52605:28)
+    at SafeSubscriber.__tryOrUnsub (/home/ec2-user/data/hinterweb/dist/server.js:20794:16)
+    at SafeSubscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20732:22)
+    at Subscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:20676:26)
+    at Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at MapSubscriber._next (/home/ec2-user/data/hinterweb/dist/server.js:23469:26)
+    at MapSubscriber.Subscriber.next (/home/ec2-user/data/hinterweb/dist/server.js:20653:18)
+    at BehaviorSubject._subscribe (/home/ec2-user/data/hinterweb/dist/server.js:21933:24)
+    at BehaviorSubject.Observable._trySubscribe (/home/ec2-user/data/hinterweb/dist/server.js:20484:25)
+Running on the server with appId=hinterwebapp
+ERROR { Error: Uncaught (in promise): Error: Cannot match any routes. URL Segment: 'images/aaaa'
+Error: Cannot match any routes. URL Segment: 'images/aaaa'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121655:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121636:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26)
+    at resolvePromise (/home/ec2-user/data/hinterweb/dist/server.js:936:31)
+    at resolvePromise (/home/ec2-user/data/hinterweb/dist/server.js:893:17)
+    at /home/ec2-user/data/hinterweb/dist/server.js:995:17
+    at ZoneDelegate.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:543:31)
+    at Object.onInvokeTask (/home/ec2-user/data/hinterweb/dist/server.js:7505:33)
+    at ZoneDelegate.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:542:36)
+    at Zone.runTask (/home/ec2-user/data/hinterweb/dist/server.js:310:47)
+    at drainMicroTaskQueue (/home/ec2-user/data/hinterweb/dist/server.js:717:35)
+    at ZoneTask.invokeTask (/home/ec2-user/data/hinterweb/dist/server.js:622:21)
+    at Server.ZoneTask.invoke (/home/ec2-user/data/hinterweb/dist/server.js:607:48)
+  rejection: Error: Cannot match any routes. URL Segment: 'images/aaaa'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121655:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121636:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26),
+  promise: 
+   ZoneAwarePromise {
+     __zone_symbol__state: 0,
+     __zone_symbol__value: Error: Cannot match any routes. URL Segment: 'images/aaaa'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121655:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121636:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26) },
+  zone: 
+   Zone {
+     _properties: { isAngularZone: true },
+     _parent: 
+      Zone {
+        _properties: {},
+        _parent: null,
+        _name: '<root>',
+        _zoneDelegate: [Object] },
+     _name: 'angular',
+     _zoneDelegate: 
+      ZoneDelegate {
+        _taskCounts: [Object],
+        zone: [Circular],
+        _parentDelegate: [Object],
+        _forkZS: null,
+        _forkDlgt: null,
+        _forkCurrZone: [Object],
+        _interceptZS: null,
+        _interceptDlgt: null,
+        _interceptCurrZone: [Object],
+        _invokeZS: [Object],
+        _invokeDlgt: [Object],
+        _invokeCurrZone: [Circular],
+        _handleErrorZS: [Object],
+        _handleErrorDlgt: [Object],
+        _handleErrorCurrZone: [Circular],
+        _scheduleTaskZS: [Object],
+        _scheduleTaskDlgt: [Object],
+        _scheduleTaskCurrZone: [Circular],
+        _invokeTaskZS: [Object],
+        _invokeTaskDlgt: [Object],
+        _invokeTaskCurrZone: [Circular],
+        _cancelTaskZS: [Object],
+        _cancelTaskDlgt: [Object],
+        _cancelTaskCurrZone: [Circular],
+        _hasTaskZS: [Object],
+        _hasTaskDlgt: [Object],
+        _hasTaskDlgtOwner: [Circular],
+        _hasTaskCurrZone: [Circular] } },
+  task: 
+   ZoneTask {
+     _zone: 
+      Zone {
+        _properties: [Object],
+        _parent: [Object],
+        _name: 'angular',
+        _zoneDelegate: [Object] },
+     runCount: 0,
+     _zoneDelegates: null,
+     _state: 'notScheduled',
+     type: 'microTask',
+     source: 'Promise.then',
+     data: 
+      ZoneAwarePromise {
+        __zone_symbol__state: 0,
+        __zone_symbol__value: Error: Cannot match any routes. URL Segment: 'images/aaaa'
+    at ApplyRedirects.noMatchError (/home/ec2-user/data/hinterweb/dist/server.js:121655:16)
+    at CatchSubscriber.selector (/home/ec2-user/data/hinterweb/dist/server.js:121636:29)
+    at CatchSubscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:26602:31)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at MapSubscriber.Subscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:20679:26)
+    at MapSubscriber.Subscriber.error (/home/ec2-user/data/hinterweb/dist/server.js:20659:18)
+    at TapSubscriber._error (/home/ec2-user/data/hinterweb/dist/server.js:27648:26) },
+     scheduleFn: undefined,
+     cancelFn: null,
+     callback: [Function],
+     invoke: [Function] } }
+Node server listening on http://localhost:80
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9609
+[ 'milestone', '9609' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9609',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9609',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9548
+[ 'milestone', '9548' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9548',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9548',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Running on the server with appId=hinterwebapp
+milestone/9587
+[ 'milestone', '9587' ]
+HttpResponse {
+  headers: 
+   HttpHeaders {
+     normalizedNames: Map {},
+     lazyUpdate: null,
+     lazyInit: [Function] },
+  status: 200,
+  statusText: 'OK',
+  url: 'http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/web/milestone/9587',
+  ok: true,
+  type: 4,
+  body: 
+   { data: [ [Object] ],
+     messages: [],
+     message: 'milestone fetched successfully for web, 9587',
+     status: 'success' } }
+Node server listening on http://localhost:80
+Node server listening on http://localhost:80
+Node server listening on http://localhost:80
+image url called, type=entry, id=9597
+image url called, type=user, id=prashant7163@gmail.com
+image url called, type=user, id=prashant7163@gmail.com
+image url called, type=entry, id=9597
+image url called, type=entry, id=9580
+image url called, type=fdsfsdf, id=9580
