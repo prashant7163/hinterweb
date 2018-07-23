@@ -103,16 +103,16 @@ export class HomecomponentComponent implements OnInit {
         // } else {
         //   seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb/image.jpg?userId=" + userData.email + "&dpTime=" + userData.dpTime;
         // }
-        // if (this.isDev) {
-        //   seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/user/" + userData.email;
-        // } else {
-        //   seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/user/" + userData.email;
-        // }
         if (this.isDev) {
-          seo_image = "http://hinter.sg/img/user/" + userData.email;
+          seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/user/" + userData.email;
         } else {
-          seo_image = "http://hinter.sg/img/user/" + userData.email;
+          seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/user/" + userData.email;
         }
+        // if (this.isDev) {
+        //   seo_image = "http://hinter.sg/img/user/" + userData.email;
+        // } else {
+        //   seo_image = "http://hinter.sg/img/user/" + userData.email;
+        // }
       }
       this.setTitle(seo_title);
       if (isPlatformServer(this.platformId)) {
@@ -281,16 +281,16 @@ export class HomecomponentComponent implements OnInit {
         // } else {
         //   seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb/image.jpg";
         // }
-        // if (this.isDev) {
-        //   seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/entry/"  + eventData.photos[0].id ;
-        // } else {
-        //   seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/entry/"  + eventData.photos[0].id ;
-        // }
         if (this.isDev) {
-          seo_image = "http://hinter.sg/img/entry/"  + eventData.photos[0].id ;
+          seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/entry/"  + eventData.photos[0].id ;
         } else {
-          seo_image = "http://hinter.sg/img/entry/"  + eventData.photos[0].id ;
+          seo_image = "http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/entry/"  + eventData.photos[0].id ;
         }
+        // if (this.isDev) {
+        //   seo_image = "http://hinter.sg/img/entry/"  + eventData.photos[0].id ;
+        // } else {
+        //   seo_image = "http://hinter.sg/img/entry/"  + eventData.photos[0].id ;
+        // }
       }
       this.setTitle(seo_title);
       if (isPlatformServer(this.platformId)) {
