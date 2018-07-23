@@ -327,16 +327,16 @@ export class HomecomponentComponent implements OnInit {
           'name': 'twitter:creator',
           content: '@Hinter_Social'
         });
-        // if(eventData.id==9587){
-        //   this._meta.addTag({
-        //     'name': 'twitter:image',
-        //     content: "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/8931/image.jpg"
-        //   });
-        //   this._meta.addTag({
-        //     'property': 'og:image',
-        //     content: "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/8931/image.jpg"
-        //   });
-        // }else{
+        if(eventData.id==9587){
+          this._meta.addTag({
+            'name': 'twitter:image',
+            content: "http://hinter.sg/img/entry/9580"
+          });
+          this._meta.addTag({
+            'property': 'og:image',
+            content: "http://hinter.sg/img/entry/9580"
+          });
+        }else{
           this._meta.addTag({
             'property': 'og:image',
             content: seo_image
@@ -345,7 +345,7 @@ export class HomecomponentComponent implements OnInit {
             'name': 'twitter:image',
             content: seo_image
           });
-        // }
+        }
       } else {
         let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
         linkCanonical.setAttribute("href", seo_url);
