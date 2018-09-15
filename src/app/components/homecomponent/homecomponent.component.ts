@@ -24,6 +24,9 @@ export class HomecomponentComponent implements OnInit {
         let id: string = params.get('id');
         id = atob(id);
         var userAgent = navigator.userAgent || navigator.vendor;
+        if (/android/i.test(userAgent)) {
+          window.location.href = "https://goo.gl/xcZT2a";
+        }
         if (/iPad|iPhone|iPod/.test(userAgent) ) {
           this.isApple = true;
           // if(/safari/i.test(userAgent)){
