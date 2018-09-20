@@ -1,18 +1,74 @@
-<div class="fullscreen-bg">
-  <video loop muted autoplay poster="/assets/images/videoframe.jpg" class="fullscreen-bg__video" *ngIf="isApple==false">
-      <source src="/assets/video/hinter_r03.mp4" type="video/mp4">
-  </video>
+<div class="home-main-container"  (scroll)="onFeedScroll()" #homeMainContainer>
+    <div class="home-data-container" >
+        <div class="home-feed-tile" *ngFor="let feedData of newsRes;let li=index;" (click)="tileClickHandler(feedData)">
+            <div class="home-feed-tile-header">
+                <div class="header-user-image-container">
+                    <div [style.background-image]="getuserImage(feedData)" class="header-user-image background_no_repeat">
 
-  <div *ngIf="isApple" style="padding: 50px;">
-    <div style="text-align: center;margin-bottom: 20px;">
-        <a href="https://goo.gl/fGGi8d">  <img style="width:100%;min-height: 200px;"
-        src="/assets/images/logo.png"/></a>
-    </div>
-    <div style="text-align: center;margin-bottom: 20px;"> <a href="https://goo.gl/fGGi8d"><img  style="width:100%;"  
-      src="/assets/images/app_store_logo.png"/></a>
+                    </div>
+                </div>
+                <div class="header-info-container">
+                    <div class="header-user-info-name">
+                        {{getHeaderText(feedData)}}
+                    </div>
+                    <div class="header-time-info">
+                        {{getPostElapsedTime(feedData)}}
+                    </div>
+                </div>
 
+                <div class="home-feed-main-image-container">
+                    <div [style.background-image]="getFeedImage(feedData,i)" class="feed-main-image background_no_repeat">
+
+                    </div>
+
+                    <div [ngClass]="getImageClassType(feedData)">
+                        {{feedData.cellType}}
+                    </div>
+                </div>
+
+                <div class="home-feed-tile-interaction-container">
+                    <div class="row">
+                        <div class="col-sm-3" style="text-align: center">
+                            <div>
+                                <img src="/assets/images/icons/ico_like.png" class="home-feed-tile-interaction-icon" />
+                            </div>
+                            <div class="home-feed-tile-interaction-text">
+                                {{getLikesCount(feedData)}}
+                            </div>
+                        </div>
+                        <div class="col-sm-3" style="text-align: center">
+                            <div>
+                                <img src="/assets/images/icons/ico_comment.png" class="home-feed-tile-interaction-icon" />
+                            </div>
+                            <div class="home-feed-tile-interaction-text">
+                                {{getCommentsCount(feedData)}}
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+
+                        </div>
+                        <div class="col-sm-3">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-feed-tile-hints-container" *ngIf="isHintAvailable(feedData)">
+                    <div class="home-feed-tile-hints-header">
+                        <div class="home-feed-tile-hints-header-text">
+                            <img src="/assets/images/icons/ico_hint_white.png" class="home-feed-tile-hint-icon"/>
+                            <span>
+                                Hints
+                            </span>
+                        </div>
+                        <ul class="home-feed-tile-hints-list">
+                            <li *ngFor="let hint of getHintsArray(feedData)" [innerHtml]="hint">
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-   
-  </div>
 </div>
-

@@ -1,37 +1,78 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ApplicationInteractor } from '../models/application-interactor';
+import { Constants } from '../models/constants';
 
 
 @Injectable()
 export class AppModuleHttpService {
 
-    baseUrl_dev:string = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi";
-    baseUrl_prod:string = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi";
-    // baseUrl:string = "https://hinter.sg/hinterapi";
-    // baseUrl:string = "https://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com/hinterapi";
+   
 
     constructor(
         private http: HttpClient) {
 
     }
 
-    getEntryDetailInfo(eventType:string,entryId:string,isDev:boolean): Observable<any> {
-        let baseUrl:string = this.baseUrl_prod;
-        if(isDev){
-            baseUrl = this.baseUrl_dev;
+    getHeaders(addAuth: boolean): any {
+        let headers: HttpHeaders;
+        if (addAuth) {
+            headers = new HttpHeaders(
+                {
+                    'Content-Type': 'application/json',
+                    'authToken': ApplicationInteractor.authToken,
+                    'email': ApplicationInteractor.userEmail
+
+                }
+            )
+        } else {
+            headers = new HttpHeaders(
+                {
+                    'Content-Type': 'application/json'
+                }
+            )
         }
-        return this.http.get<any>((baseUrl + "/web/"+eventType+"/"+entryId),  {
+        return headers;
+    }
+
+    getEntryDetailInfo(eventType: string, entryId: string): Observable<any> {
+        let baseUrl: string = Constants.baseApiUrl_prod;
+        if (ApplicationInteractor.isDev) {
+            baseUrl = Constants.baseApiUrl_dev;
+        }
+        baseUrl = baseUrl + "post/";
+        if(eventType.toLowerCase()=='milestone'){
+            baseUrl = baseUrl + "entry/milestone/";
+        }else if(eventType.toLowerCase()=='target'){
+            baseUrl = baseUrl + "target/";
+        }else if(eventType.toLowerCase()=='tape'){
+            baseUrl = baseUrl + "entry/tape/";
+        }
+        return this.http.get<any>((baseUrl +  entryId + "/get"), {
+            headers: this.getHeaders(true),
             observe: 'response'
         });
     }
 
-    getUserDetailInfo(userId:string,isDev:boolean): Observable<any> {
-        let baseUrl:string = this.baseUrl_prod;
-        if(isDev){
-            baseUrl = this.baseUrl_dev;
+    getUserDetailInfo(userId: string): Observable<any> {
+        let baseUrl: string = Constants.baseApiUrl_prod;
+        if (ApplicationInteractor.isDev) {
+            baseUrl = Constants.baseApiUrl_dev;
         }
-        return this.http.get<any>((baseUrl + "/web/user?id="+userId),  {
+        return this.http.get<any>((baseUrl + "/web/user?id=" + userId), {
+            observe: 'response'
+        });
+    }
+
+    getFeedData(queryString: string): Observable<any> {
+        let baseUrl: string = Constants.baseApiUrl_prod;
+        if (ApplicationInteractor.isDev) {
+            baseUrl = Constants.baseApiUrl_dev;
+        }
+        baseUrl = baseUrl + "get";
+        return this.http.get<any>((baseUrl + "/activity/newsfeed" + queryString), {
+            headers: this.getHeaders(true),
             observe: 'response'
         });
     }

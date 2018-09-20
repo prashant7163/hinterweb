@@ -1,222 +1,365 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Title } from '@angular/platform-browser';
+import { Component, OnInit, Inject, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Title, DomSanitizer } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 import { AppModuleHttpService } from '../../services/app-module-http.service';
 import { ApplicationInteractor } from '../../models/application-interactor';
+import { MessageService } from '../../services/messages.service';
+import { DataObject } from '../../models/data-object';
+import { ConstantFunctions } from '../../services/constant-functions';
+import { FragmentObject } from '../../models/fragment-object';
+import { UserObject } from '../../models/UserObject';
+import { PicObject } from '../../models/pic-object';
+import { MilestoneObject } from '../../models/milestone-object';
+import { TargetObject } from '../../models/target-object';
+import { TapeObject } from '../../models/tape-object';
 
 @Component({
   selector: 'app-homecomponent',
   templateUrl: './homecomponent.component.html',
   styleUrls: ['./homecomponent.component.css']
 })
-export class HomecomponentComponent implements OnInit {
+export class HomecomponentComponent implements OnInit, AfterViewInit {
 
-  isApple:boolean = false;
-  isDev: boolean = false;
-  constructor(@Inject(DOCUMENT) private document: Document, private titleService: Title, private route: ActivatedRoute, private appServices: AppModuleHttpService) {
+  newsRes: DataObject[] = [];
+  loading: boolean = false;
+  @ViewChild("homeMainContainer") homeMainContainer: ElementRef;
+
+  constructor(@Inject(DOCUMENT) private document: Document, private titleService: Title,
+    private route: ActivatedRoute, private appServices: AppModuleHttpService,private router:Router
+    , private messageService: MessageService, private domSanitizer: DomSanitizer) {
 
   }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(
-      params => {
-        let id: string = params.get('id');
-        id = atob(id);
-        var userAgent = navigator.userAgent || navigator.vendor;
-        if (/android/i.test(userAgent)) {
-          window.location.href = "https://goo.gl/xcZT2a";
-        }
-        if (/iPad|iPhone|iPod/.test(userAgent) ) {
-          this.isApple = true;
-          // if(/safari/i.test(userAgent)){
-            if(id.indexOf('dev')==-1){
-              window.location.href = "com.solution.hinter://"+params.get('id');
-            }else{
-              window.location.href = "com.solution.hinterdev://"+params.get('id');
-            }
-            setTimeout(()=>{
-              window.location.href = "https://goo.gl/fGGi8d";
-            },2000);
-          // }else{
-          //   window.location.href = "https://goo.gl/fGGi8";
-          // }
-        }
-        if (id != null) {
-          if (id.indexOf('dev') != -1) {
-            this.isDev = true;
-          }
-          let idSplit: string[] = id.split("/");
-          if (idSplit != null && idSplit.length > 1) {
-            if (idSplit[idSplit.length - 2].toLowerCase() == 'findme' || idSplit[idSplit.length - 2].toLowerCase() == 'user') {
-              this.appServices.getUserDetailInfo(idSplit[idSplit.length - 1], this.isDev).subscribe((res: any) => {
-                console.log(res);
-                if (res && res.body) {
-                  this.createUserSEOTags(res.body);
-                }
-              });
-            } else {
-              this.appServices.getEntryDetailInfo(idSplit[idSplit.length - 2], idSplit[idSplit.length - 1], this.isDev).subscribe((res: any) => {
-                console.log(res);
-                if (res && res.body) {
-                  this.createEntrySEOTags(res.body);
-                }
-              });
-            }
-          }
+    this.setTitle("Home");
+    this.getFeedData("");
+  }
 
+  ngAfterViewInit() {
+
+  }
+
+  getFeedData(queryString: string) {
+    this.messageService.sendLoaderMessage(true);
+    this.loading = true;
+    this.appServices.getFeedData(queryString).subscribe((res) => {
+      if (res && res.body && res.body.status == "success") {
+        if (res.body.data && res.body.data.length > 0) {
+          // this.newsRes = res.body.data;
+          for (var i = 0; i < res.body.data.length; ++i) {
+            this.newsRes.push(res.body.data[i]);
+          }
         }
       }
-    );
+      this.messageService.sendLoaderMessage(false);
+      this.loading = false;
+    });
   }
+
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
   }
 
-
-  createUserSEOTags(userDetail: any): void {
-    if (userDetail && userDetail.data && userDetail.data.length > 0) {
-      let userData: any = userDetail.data[0];
-      let seo_title: string = userData.name;
-      let seo_desc: string = "";
-      if (userData && userData.profile) {
-        seo_desc = userData.profile.place;
-      }
-      let seo_url: string = window.location.href;
-      let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
-      if (userData) {
-        if(this.isDev){
-          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb?userId=" + userData.email + "&dpTime=" + userData.dpTime;
-        }else{
-          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/user/profile/photo/thumb?userId=" + userData.email + "&dpTime=" + userData.dpTime;
+  getHeaderText(feedData: DataObject): string {
+    let retStr: string = "";
+    let fragments: FragmentObject[] = feedData.fragments;
+    if (fragments) {
+      for (let li: number = 0; li < fragments.length; li++) {
+        let fragment: FragmentObject = fragments[li];
+        if (fragment) {
+          fragment.text = fragment.text.replace('<', ' ');
+          fragment.text = fragment.text.replace('>', ' ');
+          retStr = retStr + fragment.text;
         }
       }
-      this.setTitle(seo_title);
-      let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
-      linkCanonical.setAttribute("href", seo_url);
-      let metaOGTitle: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('og:title', this.document, 'property');
-      metaOGTitle.setAttribute("content", seo_title);
-      let metaOGHeadline: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('og:headline', this.document, 'itemprop');
-      metaOGHeadline.setAttribute("content", seo_title);
-      let metaOGDescription: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('og:description', this.document, 'property');
-      metaOGDescription.setAttribute("content", seo_desc);
-      let metaOGImage: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('og:image', this.document, 'property');
-      metaOGImage.setAttribute("content", seo_image);
-      let metaTwitterImage: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:image', this.document);
-      metaTwitterImage.setAttribute("content", seo_image);
-      let metaTwitterImageSrc: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:image:src', this.document);
-      metaTwitterImageSrc.setAttribute("content", seo_image);
-      let metaTwitterTitle: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:title', this.document);
-      metaTwitterTitle.setAttribute("content", seo_title);
-      let metaTwitterDescription: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:description', this.document);
-      metaTwitterDescription.setAttribute("content", seo_desc);
-      let metaTwitterURL: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
-      metaTwitterURL.setAttribute("content", seo_url);
     }
+    if (retStr != null) {
 
+    }
+    return retStr;
   }
 
-  hexEncode(str: string) {
-    var hex, i;
-
-    var result = "";
-    for (i = 0; i < str.length; i++) {
-      hex = str.charCodeAt(i).toString(16);
-      result += ("000" + hex).slice(-4);
+  getuserImage(feedData: DataObject): any {
+    let retStr: any;
+    let userObject: UserObject = this.getUserDataFromFragment(feedData);
+    if (userObject != undefined) {
+      retStr = this.domSanitizer.bypassSecurityTrustStyle("url('" + ConstantFunctions.getProfileThumbnailImageUrl(userObject.email, userObject.dpTime) + "')");
+    } else {
+      retStr = '';
     }
-
-    return result;
+    return retStr;
   }
 
-  hexDecode(str: string) {
-    var j;
-    var hexes = str.match(/.{1,4}/g) || [];
-    var back = "";
-    for (j = 0; j < hexes.length; j++) {
-      back += String.fromCharCode(parseInt(hexes[j], 16));
-    }
-
-    return back;
-  }
-
-  convertUniCodeToStr(str: string): string {
-    console.log(str);
-    while (str.indexOf("\\u") != -1) {
-      let uIndex: number = str.indexOf("\\u");
-      let sIndex: number = str.indexOf(" ", uIndex);
-      if (sIndex == -1) {
-        sIndex = str.length;
+  getFeedImage(feedData: DataObject, pos: number): any {
+    let retStr: any;
+    let cellType: number = this.getFragmentType(feedData.cellType);
+    if (cellType == 1) {
+      let milestoneObj: MilestoneObject = this.getMileStoneDataFromFragment(feedData);
+      if (milestoneObj != undefined && milestoneObj.photos != null && milestoneObj.photos.length > 0) {
+        retStr = this.domSanitizer.bypassSecurityTrustStyle("url('" + ConstantFunctions.getMainImageUrl(milestoneObj.photos[0].id) + "')");
       }
-      console.log(uIndex + " " + sIndex);
-      let temp: string = str.substring(uIndex, sIndex).trim();
-      console.log(temp.trim());
-      console.log(this.hexDecode(this.hexEncode(str)));
-      console.log(this.hexDecode(this.hexEncode("\uD83D\uDE44")));
-      console.log(this.hexDecode(this.hexEncode(temp)));
-      str.replace(str.substring(uIndex, sIndex), this.hexDecode(this.hexEncode(str.substring(uIndex, sIndex))));
-      console.log(str);
-      break;
+    } else if (cellType == 2) {
+      let targetObj: TargetObject = this.getTargetDataFromFragment(feedData);
+      if (targetObj != undefined && targetObj.photos != null && targetObj.photos.length > 0) {
+        retStr = this.domSanitizer.bypassSecurityTrustStyle("url('" + ConstantFunctions.getMainImageUrl(targetObj.photos[0].id) + "')");
+      }
     }
-    return str;
+    else if (cellType == 3) {
+      let tapeObject: TapeObject = this.getTapeDataFromFragment(feedData);
+      if (tapeObject != undefined && tapeObject.photos != null && tapeObject.photos.length > 0) {
+        retStr = this.domSanitizer.bypassSecurityTrustStyle("url('" + ConstantFunctions.getMainImageUrl(tapeObject.photos[0].id) + "')");
+      }
+    }
+    else if (cellType == 4) {
+      let picObject: PicObject = this.getPhotoDataFromFragment(feedData);
+      if (picObject != null && picObject.id) {
+        retStr = this.domSanitizer.bypassSecurityTrustStyle("url('" + ConstantFunctions.getMainImageUrl(picObject.id) + "')");
+      }
+    }
+
+    if (retStr == null) {
+      retStr = this.domSanitizer.bypassSecurityTrustStyle("url('" + ConstantFunctions.getRandomBackground(pos) + "')");
+    }
+
+    return retStr;
   }
 
-  createEntrySEOTags(eventDetail: any): void {
-    if (eventDetail && eventDetail.data && eventDetail.data.length > 0) {
-      let eventData: any = eventDetail.data[0];
-      let seo_title: string = eventData.text;
-      // console.log(seo_title);
-      let seo_desc: string = "";
-      if (eventData.hintsJSONArray) {
-        let hints: string[] = JSON.parse(eventData.hintsJSONArray);
-        if (hints) {
-          seo_desc = (hints[0]);
-          let count: number = 1;
-          while (seo_desc.length < 200 && count < hints.length) {
-            seo_desc = seo_desc + " " + (hints[count]);
-            count++;
-          }
-          seo_desc.replace(/([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g, '')
-          var div = document.createElement("div");
-          div.innerHTML = seo_desc;
-          seo_desc = div.textContent || div.innerText || seo_desc;
+  getPostElapsedTime(feedData: DataObject): string {
+    if (feedData && feedData.time) {
+      try {
+        let entryTime: number = parseFloat(feedData.time);
+        let entryDate = new Date();
+        entryDate.setTime(entryTime);
+        return ConstantFunctions.getMonthStr(entryDate.getMonth()) + " " + entryDate.getDate() + ", " + entryDate.getFullYear();
+      } catch (ex) {
+
+      }
+
+    }
+    return '';
+  }
+
+  getFragmentType(cellType: string): number {
+    if (cellType.toLowerCase() == 'milestone') {
+      return 1;
+    }
+    if (cellType.toLowerCase() == 'target') {
+      return 2;
+    }
+    if (cellType.toLowerCase() == 'tape') {
+      return 3;
+    }
+    if (cellType.toLowerCase() == 'photo') {
+      return 4;
+    }
+    return 0;
+  }
+
+  getUserDataFromFragment(feedData: DataObject): UserObject {
+    if (feedData && feedData.fragments) {
+      for (let li: number = 0; li < feedData.fragments.length; li++) {
+        let fragment: FragmentObject = feedData.fragments[li];
+        if (fragment && fragment.type.toLowerCase() == 'user') {
+          return fragment.user;
         }
       }
-      let seo_keywords: string = eventData.hashtags;
-      let seo_url: string = window.location.href;;
-      let seo_image: string = (ApplicationInteractor.seoUrl + "/assets/images/logo.png");
-      if (eventData.photos && eventData.photos.length > 0) {
-        if(this.isDev){
-          seo_image = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
-        }else{
-          seo_image = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi/content/photo/" + eventData.photos[0].id + "/thumb";
-        }
-      }
-      this.setTitle(seo_title);
-      let linkCanonical: HTMLElement = ApplicationInteractor.getOrCreateLinkElement('canonical', this.document, seo_url);
-      linkCanonical.setAttribute("href", seo_url);
-      let metaKeywords: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('keywords', this.document)
-      metaKeywords.setAttribute("content", seo_keywords);
-      let metaOGTitle: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('og:title', this.document, 'property');
-      metaOGTitle.setAttribute("content", seo_title);
-      let metaOGHeadline: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('og:headline', this.document, 'itemprop');
-      metaOGHeadline.setAttribute("content", seo_title);
-      let metaOGDescription: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('og:description', this.document, 'property');
-      metaOGDescription.setAttribute("content", seo_desc);
-      let metaOGImage: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('og:image', this.document, 'property');
-      metaOGImage.setAttribute("content", seo_image);
-      let metaTwitterImage: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:image', this.document);
-      metaTwitterImage.setAttribute("content", seo_image);
-      let metaTwitterImageSrc: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:image:src', this.document);
-      metaTwitterImageSrc.setAttribute("content", seo_image);
-      let metaTwitterTitle: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:title', this.document);
-      metaTwitterTitle.setAttribute("content", seo_title);
-      let metaTwitterDescription: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:description', this.document);
-      metaTwitterDescription.setAttribute("content", seo_desc);
-      let metaTwitterURL: HTMLElement = ApplicationInteractor.getOrCreateMetaElement('twitter:url', this.document);
-      metaTwitterURL.setAttribute("content", seo_url);
     }
-
+    return null;
   }
 
+  getPhotoDataFromFragment(feedData: DataObject): PicObject {
+    if (feedData && feedData.fragments) {
+      for (let li: number = 0; li < feedData.fragments.length; li++) {
+        let fragment: FragmentObject = feedData.fragments[li];
+        if (fragment && fragment.type.toLowerCase() == 'photo') {
+          return fragment.photo;
+        }
+      }
+    }
+    return null;
+  }
+
+  getMileStoneDataFromFragment(feedData: DataObject): MilestoneObject {
+    if (feedData && feedData.fragments) {
+      for (let li: number = 0; li < feedData.fragments.length; li++) {
+        let fragment: FragmentObject = feedData.fragments[li];
+        if (fragment && fragment.type.toLowerCase() == 'milestone') {
+          return fragment.milestone;
+        }
+      }
+    }
+    return null;
+  }
+
+  getTargetDataFromFragment(feedData: DataObject): TargetObject {
+    if (feedData && feedData.fragments) {
+      for (let li: number = 0; li < feedData.fragments.length; li++) {
+        let fragment: FragmentObject = feedData.fragments[li];
+        if (fragment && fragment.type.toLowerCase() == 'target') {
+          return fragment.target;
+        }
+      }
+    }
+    return null;
+  }
+
+  getTapeDataFromFragment(feedData: DataObject): TapeObject {
+    if (feedData && feedData.fragments) {
+      for (let li: number = 0; li < feedData.fragments.length; li++) {
+        let fragment: FragmentObject = feedData.fragments[li];
+        if (fragment && fragment.type.toLowerCase() == 'tape') {
+          return fragment.tape;
+        }
+      }
+    }
+    return null;
+  }
+
+  getImageClassType(feedData: DataObject): string {
+    let cellType: number = this.getFragmentType(feedData.cellType);
+    if (cellType == 1) {
+      return 'home-feed-tile-milestone-bg';
+    }
+    else if (cellType == 2) {
+      return 'home-feed-tile-target-bg';
+    }
+    else if (cellType == 3) {
+      return 'home-feed-tile-tape-bg';
+    }
+    else if (cellType == 4) {
+      return 'home-feed-tile-photo-bg';
+    }
+
+    return '';
+  }
+
+  getLikesCount(feedData): string {
+    let cellType: number = this.getFragmentType(feedData.cellType);
+    let likeCount: number = 0;
+    if (cellType == 1) {
+      let milestoneObj: MilestoneObject = this.getMileStoneDataFromFragment(feedData);
+      if (milestoneObj != undefined) {
+        likeCount = milestoneObj.likesCount;
+      }
+    } else if (cellType == 2) {
+      let targetObj: TargetObject = this.getTargetDataFromFragment(feedData);
+      if (targetObj != undefined) {
+        likeCount = targetObj.likesCount;
+      }
+    }
+    else if (cellType == 3) {
+      let tapeObject: TapeObject = this.getTapeDataFromFragment(feedData);
+      if (tapeObject != undefined) {
+        likeCount = tapeObject.likesCount;
+      }
+    }
+    else if (cellType == 4) {
+      let picObject: PicObject = this.getPhotoDataFromFragment(feedData);
+      if (picObject != undefined) {
+        likeCount = picObject.likesCount;
+      }
+    }
+    if (likeCount == 1) {
+      return "1 like";
+    } else if (likeCount > 1) {
+      return likeCount + " likes";
+    }
+    return "like";
+  }
+
+  getCommentsCount(feedData): string {
+    let cellType: number = this.getFragmentType(feedData.cellType);
+    let commentCount: number = 0;
+    if (cellType == 1) {
+      let milestoneObj: MilestoneObject = this.getMileStoneDataFromFragment(feedData);
+      if (milestoneObj != undefined) {
+        commentCount = milestoneObj.commentCount;
+      }
+    } else if (cellType == 2) {
+      let targetObj: TargetObject = this.getTargetDataFromFragment(feedData);
+      if (targetObj != undefined) {
+        commentCount = targetObj.commentCount;
+      }
+    }
+    else if (cellType == 3) {
+      let tapeObject: TapeObject = this.getTapeDataFromFragment(feedData);
+      if (tapeObject != undefined) {
+        commentCount = tapeObject.commentCount;
+      }
+    }
+    else if (cellType == 4) {
+      let picObject: PicObject = this.getPhotoDataFromFragment(feedData);
+      if (picObject != undefined) {
+        commentCount = picObject.commentsCount;
+      }
+    }
+    if (commentCount == 1) {
+      return "1 comment";
+    } else if (commentCount > 1) {
+      return commentCount + " comments";
+    }
+    return "comment";
+  }
+
+  getHintsArray(feedData: DataObject): string[] {
+    let retArr: string[] = [];
+    if (feedData && feedData.hints) {
+      retArr = JSON.parse(feedData.hints);
+      retArr[4] = retArr[4].replace(/"/g, " ");
+    }
+    return retArr;
+  }
+
+  isHintAvailable(feedData): boolean {
+    if (feedData && feedData.hints) {
+      return true;
+    }
+    return false;
+  }
+
+  onFeedScroll() {
+
+    if (this.loading == false && this.homeMainContainer.nativeElement.scrollTop + this.homeMainContainer.nativeElement.clientHeight + 300 > this.homeMainContainer.nativeElement.scrollHeight) {
+      let feedData: DataObject = this.newsRes[this.newsRes.length - 1];
+      let queryString: string = "?feedTime=" + feedData.time + "&type=old";
+      this.getFeedData(queryString);
+    }
+  }
+
+  tileClickHandler(feedData: DataObject): void {
+    let cellType: number = this.getFragmentType(feedData.cellType);
+    let urlData:string = feedData.cellType;
+    if (cellType == 1) {
+      let milestoneObj: MilestoneObject = this.getMileStoneDataFromFragment(feedData);
+      if (milestoneObj != undefined) {
+        urlData = urlData +"/"+ milestoneObj.id;
+      }else{
+        return;
+      }
+    } else if (cellType == 2) {
+      let targetObj: TargetObject = this.getTargetDataFromFragment(feedData);
+      if (targetObj != undefined) {
+        urlData = urlData +"/"+ targetObj.id;
+      }else{
+        return;
+      }
+    }
+    else if (cellType == 3) {
+      let tapeObject: TapeObject = this.getTapeDataFromFragment(feedData);
+      if (tapeObject != undefined) {
+        urlData = urlData +"/"+ tapeObject.id;
+      }else{
+        return;
+      }
+    }else{
+      return;
+    }
+    if(ApplicationInteractor.isDev){
+      urlData = "dev/"+urlData;
+    }
+    urlData = btoa(urlData);
+    this.router.navigate([urlData]);
+  }
 }

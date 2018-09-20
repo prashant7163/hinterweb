@@ -1,0 +1,125 @@
+.main-detail-container {
+   
+    max-height: calc(100vh - 70px);
+    overflow: auto;
+}
+
+.detail-data-container {
+    box-shadow: 2px 5px rgba(0, 0, 0, .16);
+    min-height: calc(100vh - 70px);
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 15px;
+    margin: auto;
+    padding: 10px 20px;
+    max-width: 40%;
+ 
+}
+
+.header-info-container {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: top;
+    padding: 10px 15px;
+}
+
+.header-time-info {
+    color: #a1a6bb;
+}
+
+.header-info-container {
+    display: inline-block;
+}
+
+.header-user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.header-user-image-container {
+    display: inline-block;
+}
+
+.header-info-follow-container {
+    float: right;
+    border-radius: 3px;
+    padding: 5px 15px;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: #1a7fd2;
+}
+
+.icon-location {
+    height: 15px;
+    margin-right: 5px;
+}
+
+.detail-info-main-image {
+    border-radius: 5px;
+    height: 40vh;
+}
+
+.entry-detail-title {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.entry-detail-hashtags {
+    font-size: 12px;
+    color: #1a7fd2;
+}
+
+.entry-detail-location {
+    font-size: 12px;
+    color: #a1a6bb;
+}
+
+.entry-detail-hints-header-text {
+    display: inline-block;
+    padding: 5px 15px 5px 5px;
+    border-radius: 15px;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #ff9a00;
+}
+
+.entry-detail-hint-icon {
+    height: 15px;
+    margin-right: 5px;
+}
+
+.entry-detail-hints-header {
+    padding: 0px 50px 30px 20px;
+}
+
+.entry-detail-hints-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 11px;
+    color: rgba(0, 0, 0, .75);
+}
+
+.entry-detail-hints-list li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+.entry-detail-hints-list li::before {
+    content: "•";
+    font-size: 14px;
+    margin-right: 10px;
+    color: #ff9a00;
+    margin-left: 10px;
+}
+
+.entry-detail-interaction-icon {
+    height: 15px;
+}
+
+.entry-detail-interaction-container {
+    padding: 20px 70px 20px 70px;
+    font-size: 11px;
+}

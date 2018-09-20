@@ -1,0 +1,20 @@
+export class PicObject{
+    dateCreated:string;
+    name:string;
+    caption:string;
+    dateModified:string; 
+    id:string;
+    imageId:string;
+    primary:boolean;
+    place:string; 
+    time:string;
+    base64Value:string;
+    url:string;
+    height:number; 
+    width:number;
+    imgidx:number;
+    hintidx:number; 
+    likesCount:number;
+    commentsCount:number;
+    liked:string;
+}

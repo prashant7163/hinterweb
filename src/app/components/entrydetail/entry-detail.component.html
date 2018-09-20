@@ -1,0 +1,100 @@
+<div class=" main-detail-container">
+    <div class=" detail-data-container" *ngIf="detailResponse!=null">
+
+        <div class=" header-data">
+            <div class="header-user-image-container">
+                <div [style.background-image]="getuserImage()" class="header-user-image background_no_repeat">
+
+                </div>
+            </div>
+            <div class="header-info-container">
+                <div class="header-user-info-name">
+                    {{detailResponse.user.name}}
+                </div>
+                <div class="header-time-info">
+                    {{getPostElapsedTime()}}
+                </div>
+            </div>
+            <div class="header-info-follow-container">
+                Follow
+            </div>
+        </div>
+
+        <div class="entry-detail-info-container">
+            <div class="entry-detail-title">
+                {{detailResponse.text}}
+            </div>
+            <div class="entry-detail-hashtags" *ngIf="detailResponse.hashtags">
+                {{detailResponse.hashtags}}
+            </div>
+            <div class="entry-detail-location" *ngIf="detailResponse.place">
+                <span>
+                    <img src="/assets/images/icons/ico_location.png" class="icon-location" />
+                </span>
+                <span>
+                    {{detailResponse.place}}
+                </span>
+            </div>
+        </div>
+
+        <div class="entry-detail-image-container">
+
+            <div [style.background-image]="getMainImage()" class="detail-info-main-image background_no_repeat">
+
+            </div>
+        </div>
+
+        <div class="entry-detail-interaction-container">
+            <div class="row">
+                <div class="col-sm-3" style="text-align: center">
+                    <div>
+                        <img src="/assets/images/icons/ico_like.png" class="entry-detail-interaction-icon" />
+                    </div>
+                    <div class="entry-detail-interaction-text">
+                        {{getLikesCount()}}
+                    </div>
+                </div>
+                <div class="col-sm-3" style="text-align: center">
+                    <div>
+                        <img src="/assets/images/icons/ico_thanks.png" class="entry-detail-interaction-icon" />
+                    </div>
+                    <div class="entry-detail-interaction-text">
+                        {{getThanksCount()}}
+                    </div>
+                </div>
+                <div class="col-sm-3" style="text-align: center">
+                    <div>
+                        <img src="/assets/images/icons/ico_comment.png" class="entry-detail-interaction-icon" />
+                    </div>
+                    <div class="entry-detail-interaction-text">
+                        {{getCommentsCount()}}
+                    </div>
+                </div>
+                <div class="col-sm-3" style="text-align: center">
+                    <div>
+                        <img src="/assets/images/icons/ico_share.png" class="entry-detail-interaction-icon" />
+                    </div>
+                    <div class="entry-detail-interaction-text">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry-detail-hints-container" *ngIf="isHintAvailable()">
+            <div class="entry-detail-hints-header">
+                <div class="entry-detail-hints-header-text">
+                    <img src="/assets/images/icons/ico_hint_white.png" class="entry-detail-hint-icon" />
+                    <span>
+                        Hints
+                    </span>
+                </div>
+                <ul class="entry-detail-hints-list">
+                    <li *ngFor="let hint of getHintsArray()" [innerHtml]="hint">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>

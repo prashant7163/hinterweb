@@ -9,6 +9,8 @@ import { SupportComponent } from './components/support/support.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { UseragreementComponent } from './components/useragreement/useragreement.component';
 import { HomecomponentComponent } from './components/homecomponent/homecomponent.component';
+import { EntryDetailComponent } from './components/entrydetail/entry-detail.component';
+import { MessageService } from './services/messages.service';
 
 @NgModule({
   declarations: [
@@ -16,14 +18,15 @@ import { HomecomponentComponent } from './components/homecomponent/homecomponent
     SupportComponent,
     PrivacyComponent,
     UseragreementComponent,
-    HomecomponentComponent
+    HomecomponentComponent,
+    EntryDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AppModuleHttpService],
+  providers: [AppModuleHttpService,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
