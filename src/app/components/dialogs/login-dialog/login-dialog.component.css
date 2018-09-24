@@ -1,0 +1,112 @@
+.dialog-header-icon{
+    width: 25px;
+    cursor: pointer;
+}
+
+.main-dialog-contianer{
+    background-color: #E9EBEE;
+}
+
+.dialog-header-box{
+    text-align: right;
+}
+
+.dilaog-header-text1{
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.dilaog-header-text2{
+    font-size: 20px;
+    margin-top: 10px;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+}
+
+.dialog-login-input-container{
+    border-radius: 5px;
+    border :1px solid #111E3C;
+    margin-top: 10px;
+    box-shadow: 1px 3px rgba(0, 0, 0, .16);
+}
+
+.dialog-body-icon-container{
+    padding: 10px;
+    background-color: #111E3C;
+    display: inline-block;
+}
+
+.dialog-body-input-container{
+    display: inline-block;
+    width: calc(100% - 40px);
+}
+
+.dialog-login-body{
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+}
+
+.dialog-body-icon{
+    width: 20px;
+}
+
+.dialog-body-input{
+    width: 100%;
+    padding: 8px 0 8px 5px;
+}
+
+.dialog-login-button{
+    background-color: #111E3C;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin: auto;
+    display: inline-block;
+    font-size: 18px;
+    box-shadow: 1px 3px rgba(0, 0, 0, .16);
+}
+
+.dialog-login-button-container{
+    text-align: center;
+    padding: 15px;
+}
+
+.dialog-sign-up-container{
+    text-align: center;
+    font-size: 13px;
+    font-family: Montserrat-Light;
+}
+
+.dialog-sign-up-icons{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.dialog-sign-up-icon{
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dialog-footer-icons{
+    text-align: center;
+}
+
+.dialog-footer-container{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.dialog-footer-icon{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+}

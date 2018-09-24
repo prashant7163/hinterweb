@@ -133,6 +133,55 @@ export class ConstantFunctions {
         }
         return '/assets/images/background/event_background1.png';
     }
+
+    static isOnmobileDevice():boolean{
+        if(window.innerWidth<=ApplicationInteractor.MOBILE_MAX_WIDTH){
+            return true;
+        }
+        return false;
+    }
+
+    static hexEncode(str: string) {
+        var hex, i;
+        console.log("hx:"+str);
+        var result = "";
+        for (i = 0; i < str.length; i++) {
+          hex = str.charCodeAt(i).toString(16);
+          result += ("000" + hex).slice(-4);
+        }
+        console.log("hxr:"+str);
+        return result;
+      }
+    
+      static hexDecode(str: string) {
+        var j;
+        var hexes = str.match(/.{1,4}/g) || [];
+        var back = "";
+        for (j = 0; j < hexes.length; j++) {
+          back += String.fromCharCode(parseInt(hexes[j], 16));
+        }
+    
+        return back;
+      }
+    
+      static convertUniCodeToStr(str: string): string {
+        console.log(str);
+        while (str.indexOf("\\u") != -1) {
+          let uIndex: number = str.indexOf("\\u");
+          let sIndex: number = str.indexOf(" ", uIndex);
+          if (sIndex == -1) {
+            sIndex = str.length;
+          }
+          let temp: string = str.substring(uIndex, sIndex).trim();
+          console.log(temp.trim());
+          console.log(this.hexDecode(this.hexEncode("\uD83D\uDE42")));
+          console.log(this.hexDecode(this.hexEncode(temp)));
+          str.replace(str.substring(uIndex, sIndex), this.hexDecode(this.hexEncode(str.substring(uIndex, sIndex))));
+          console.log(str);
+          break;
+        }
+        return str;
+      }
 }
 
 

@@ -15,24 +15,24 @@ import { TargetObject } from '../../models/target-object';
 import { TapeObject } from '../../models/tape-object';
 
 @Component({
-  selector: 'app-homecomponent',
-  templateUrl: './homecomponent.component.html',
-  styleUrls: ['./homecomponent.component.css']
+  selector: 'app-feedcomponent',
+  templateUrl: './feedcomponent.component.html',
+  styleUrls: ['./feedcomponent.component.scss']
 })
-export class HomecomponentComponent implements OnInit, AfterViewInit {
+export class feedcomponentComponent implements OnInit, AfterViewInit {
 
   newsRes: DataObject[] = [];
   loading: boolean = false;
-  @ViewChild("homeMainContainer") homeMainContainer: ElementRef;
+  @ViewChild("feedMainContainer") feedMainContainer: ElementRef;
 
   constructor(@Inject(DOCUMENT) private document: Document, private titleService: Title,
-    private route: ActivatedRoute, private appServices: AppModuleHttpService,private router:Router
+    private route: ActivatedRoute, private appServices: AppModuleHttpService, private router: Router
     , private messageService: MessageService, private domSanitizer: DomSanitizer) {
 
   }
 
   ngOnInit() {
-    this.setTitle("Home");
+    this.setTitle("feed");
     this.getFeedData("");
   }
 
@@ -72,6 +72,9 @@ export class HomecomponentComponent implements OnInit, AfterViewInit {
           fragment.text = fragment.text.replace('<', ' ');
           fragment.text = fragment.text.replace('>', ' ');
           retStr = retStr + fragment.text;
+          retStr = retStr
+            .replace(/\\u(....)/g, (match, p1) => String.fromCharCode(parseInt(p1, 16)))
+            .replace(/\\(\d{3})/g, (match, p1) => String.fromCharCode(parseInt(p1, 8)));
         }
       }
     }
@@ -217,22 +220,74 @@ export class HomecomponentComponent implements OnInit, AfterViewInit {
     return null;
   }
 
-  getImageClassType(feedData: DataObject): string {
+  getCellTypeImageSource(feedData: DataObject): string {
     let cellType: number = this.getFragmentType(feedData.cellType);
     if (cellType == 1) {
-      return 'home-feed-tile-milestone-bg';
+      return '/assets/images/icons/ico_milestoneflag.png';
     }
     else if (cellType == 2) {
-      return 'home-feed-tile-target-bg';
+      return '/assets/images/icons/ico_target_white.png';
     }
     else if (cellType == 3) {
-      return 'home-feed-tile-tape-bg';
+      return '/assets/images/icons/ico_moment.png';
     }
     else if (cellType == 4) {
-      return 'home-feed-tile-photo-bg';
+      return '/assets/images/icons/ico_type_photo.png';
     }
 
     return '';
+  }
+
+  getImageClassType(feedData: DataObject): string {
+    let cellType: number = this.getFragmentType(feedData.cellType);
+    if (cellType == 1) {
+      return 'feed-tile-milestone-bg';
+    }
+    else if (cellType == 2) {
+      return 'feed-tile-target-bg';
+    }
+    else if (cellType == 3) {
+      return 'feed-tile-tape-bg';
+    }
+    else if (cellType == 4) {
+      return 'feed-tile-photo-bg';
+    }
+
+    return '';
+  }
+
+  getTileTitle(feedData): string {
+    let cellType: number = this.getFragmentType(feedData.cellType);
+    let titleStr: string = null;
+    if (cellType == 1) {
+      let milestoneObj: MilestoneObject = this.getMileStoneDataFromFragment(feedData);
+      if (milestoneObj != undefined) {
+        titleStr = milestoneObj.text;
+      }
+    } else if (cellType == 2) {
+      let targetObj: TargetObject = this.getTargetDataFromFragment(feedData);
+      if (targetObj != undefined) {
+        titleStr = targetObj.text;
+      }
+    }
+    else if (cellType == 3) {
+      let tapeObject: TapeObject = this.getTapeDataFromFragment(feedData);
+      if (tapeObject != undefined) {
+        titleStr = tapeObject.text;
+      }
+    }
+    else if (cellType == 4) {
+      let picObject: PicObject = this.getPhotoDataFromFragment(feedData);
+      if (picObject != undefined) {
+        titleStr = null;
+      }
+    }
+    if (titleStr) {
+      titleStr = titleStr
+        .replace(/\\u(....)/g, (match, p1) => String.fromCharCode(parseInt(p1, 16)))
+        .replace(/\\(\d{3})/g, (match, p1) => String.fromCharCode(parseInt(p1, 8)));
+    }
+    return titleStr;
   }
 
   getLikesCount(feedData): string {
@@ -321,7 +376,7 @@ export class HomecomponentComponent implements OnInit, AfterViewInit {
 
   onFeedScroll() {
 
-    if (this.loading == false && this.homeMainContainer.nativeElement.scrollTop + this.homeMainContainer.nativeElement.clientHeight + 300 > this.homeMainContainer.nativeElement.scrollHeight) {
+    if (this.loading == false && this.feedMainContainer.nativeElement.scrollTop + this.feedMainContainer.nativeElement.clientHeight + 300 > this.feedMainContainer.nativeElement.scrollHeight) {
       let feedData: DataObject = this.newsRes[this.newsRes.length - 1];
       let queryString: string = "?feedTime=" + feedData.time + "&type=old";
       this.getFeedData(queryString);
@@ -330,34 +385,34 @@ export class HomecomponentComponent implements OnInit, AfterViewInit {
 
   tileClickHandler(feedData: DataObject): void {
     let cellType: number = this.getFragmentType(feedData.cellType);
-    let urlData:string = feedData.cellType;
+    let urlData: string = feedData.cellType;
     if (cellType == 1) {
       let milestoneObj: MilestoneObject = this.getMileStoneDataFromFragment(feedData);
       if (milestoneObj != undefined) {
-        urlData = urlData +"/"+ milestoneObj.id;
-      }else{
+        urlData = urlData + "/" + milestoneObj.id;
+      } else {
         return;
       }
     } else if (cellType == 2) {
       let targetObj: TargetObject = this.getTargetDataFromFragment(feedData);
       if (targetObj != undefined) {
-        urlData = urlData +"/"+ targetObj.id;
-      }else{
+        urlData = urlData + "/" + targetObj.id;
+      } else {
         return;
       }
     }
     else if (cellType == 3) {
       let tapeObject: TapeObject = this.getTapeDataFromFragment(feedData);
       if (tapeObject != undefined) {
-        urlData = urlData +"/"+ tapeObject.id;
-      }else{
+        urlData = urlData + "/" + tapeObject.id;
+      } else {
         return;
       }
-    }else{
+    } else {
       return;
     }
-    if(ApplicationInteractor.isDev){
-      urlData = "dev/"+urlData;
+    if (ApplicationInteractor.isDev) {
+      urlData = "dev/" + urlData;
     }
     urlData = btoa(urlData);
     this.router.navigate([urlData]);

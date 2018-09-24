@@ -1,53 +1,86 @@
-<div class="main-container">
-
-    <div class="main-header-container ">
-
-        <div class="row">
-            <div class="col-sm-4">
-                <span style="display: inline-block;margin-right: 10px;">
-                    <img src="/assets/images/icons/hinter_header_logo.png" width="25px" />
-                </span>
-
-                <span class="header-item" [ngClass]="getSelectedHeader(0)" (click)="headerClickHandler(0)">
-                    Home
-                </span>
-
-                <span class="header-item" [ngClass]="getSelectedHeader(1)">
-                    About Us
-                </span>
-            </div>
-            <div class="col-sm-4" style="text-align: center;">
-                <span class="header-search-box">
-                    <span class="header-search-box-text">
-                        Search Experience..
-                    </span>
-                    <span>
-                        <img src="/assets/images/icons/ico_search.png" width="15px" />
-                    </span>
-                </span>
-            </div>
-            <div class="col-sm-4" style="text-align: right;">
-                <span class="header-create-exp-container">
-                    <span>
-                        Create Exp
-                    </span>
-                    <span>
-                        <img src="/assets/images/icons/ico_pen.png" width="15px" />
-                    </span>
-                </span>
-                <span class="header-create-login-container">
-                    Log in
-                </span>
-
-            </div>
+<mat-sidenav-container class="mysidenav-container">
+    <mat-sidenav #sidenav [mode]="'over'">
+       <div class="side-nav-container">
+        <div class="side-nave-list-item" (click)="sidenav.toggle();headerClickHandler(1)" >
+            Home
         </div>
-    </div>
+        <div class="side-nave-list-item" (click)="sidenav.toggle();headerClickHandler(0)">
+            Feed
+        </div>
+       </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="main-container">
 
-    <div class="main-data-container">
-        <router-outlet></router-outlet>
-    </div>
+            <div class="main-header-container ">
 
-</div>
+                <div class="row">
+                    <div class="col-sm-4 col-3">
+                        <span style="display: inline-block;margin-right: 10px;">
+                            <img src="/assets/images/icons/hinter_header_logo.png" class="header-logo" />
+                        </span>
+
+                        <span  style="display: inline-block;margin-top: 5px;cursor: pointer;" *ngIf="isMobileDevice">
+                            <img src="/assets/images/icons/ico_edit.png" class="header-bar-icon" />
+                        </span>
+
+                        <span class="header-item" [ngClass]="getSelectedHeader(0)" (click)="headerClickHandler(0)"
+                            *ngIf="isMobileDevice==false">
+                            Feed
+                        </span>
+
+                        <span class="header-item" [ngClass]="getSelectedHeader(1)" (click)="headerClickHandler(1)"
+                            *ngIf="isMobileDevice==false">
+                            Home
+                        </span>
+                    </div>
+                    <div class="col-sm-4 col-6" style="text-align: center;">
+                        <span class="header-search-box">
+                            <span class="header-search-box-text">
+                                Search Experience..
+                            </span>
+                            <span>
+                                <img src="/assets/images/icons/ico_search.png" width="15px" style="vertical-align: top !important;margin-top: 2px;" />
+                            </span>
+                        </span>
+                    </div>
+                    <div class="col-sm-4 col-3" style="text-align: right;">
+                        <span class="header-create-exp-container" *ngIf="isMobileDevice==false">
+                            <span>
+                                Experience
+                            </span>
+                            <span>
+                                <img src="/assets/images/icons/ico_pen.png" width="15px" />
+                            </span>
+                        </span>
+                        <span class="header-create-login-container" (click)="showLoginDialog()" *ngIf="isMobileDevice==false">
+                            Log in
+                        </span>
+
+                        <span style="display: inline-block;margin-right: 10px;margin-top: 5px;cursor: pointer;" (click)="showLoginDialog()" *ngIf="isMobileDevice">
+                            <img src="/assets/images/icons/ico_anonymous_user.png" class="header-bar-icon" />
+                        </span>
+
+                        <span style="display: inline-block;margin-top: 5px;cursor: pointer;" *ngIf="isMobileDevice"
+                            (click)="sidenav.toggle()">
+                            <img src="/assets/images/icons/ico_menu_side.png" class="header-bar-icon" />
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-data-container">
+                <router-outlet></router-outlet>
+            </div>
+
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
 
 <div class="loader-main-container" *ngIf="showLoader">
     <img src="/assets/images/icons/loader.gif" style="height:100px;" />

@@ -16,8 +16,10 @@ export class ApplicationInteractor {
     return obj;
   }
 
-  static authToken:string = "5a2929be-f0b6-4474-8839-43729dc39c3d";
-  static userEmail:string = "arjunkapoor.nsit@gmail.com";
-  static isDev:boolean = true;
-  
+  static authToken: string = "5a2929be-f0b6-4474-8839-43729dc39c3d";
+  static userEmail: string = "arjunkapoor.nsit@gmail.com";
+  static isDev: boolean = true;
+  static MOBILE_MAX_WIDTH = 576;  
+  static TABLET_MAX_WIDTH = 1024; 
+
 }

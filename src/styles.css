@@ -18,3 +18,10 @@ body{
     background-size: cover;
     background-position: center;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.mat-dialog-container {
+    background: #E9EBEE;
+    color: rgba(0,0,0,.87);
+}

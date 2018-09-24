@@ -7,11 +7,25 @@
     RewriteEngine On
 
     <IfModule mod_proxy_http.c>
-        RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|Whatsapp|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator [NC,OR]
+
+	 RewriteCond %{REQUEST_URI} /img
+     # RewriteRule /img/(.*) http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/$1 [L,R]
+	 RewriteRule ^/?img/(.*)$ http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/$1 [L,P]
+
+
+	 RewriteCond %{REQUEST_URI} /hsimage
+	 RewriteRule ^/?hsimage/(.*)$ http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/hsimage/$1 [L,P]
+	 
+	 RewriteCond %{REQUEST_URI} /hs
+ 	 RewriteRule ^/?hs/(.*)$ http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/hs/$1 [L,P]
+
+		RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot|Whatsapp|vkShare|W3C_Validator [NC,OR]
         RewriteCond %{QUERY_STRING} _escaped_fragment_
         
         # Only proxy the request to Prerender if it's a request for HTML
-        RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent|\.ttf|\.woff))(.*) http://service.prerender.io/http://hinter.sg/$2 [P,L]
+ #       RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent|\.ttf|\.woff))(.*) http://service.prerender.io/http://hinter.sg/$2 [P,L]
+        RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent|\.ttf|\.woff))(.*) http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/$2 [P,L]
+   
     </IfModule>
 </IfModule>
 
@@ -21,3 +35,5 @@ RewriteEngine On
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
+
+#   Redirect 302 /img/(.*) http://ec2-13-250-111-58.ap-southeast-1.compute.amazonaws.com/image/$2

@@ -9,10 +9,13 @@
     min-height: calc(100vh - 70px);
     border-radius: 5px;
     background-color: #ffffff;
-    padding: 15px;
     margin: auto;
     padding: 10px 20px;
     max-width: 40%;
+    @media only screen and (max-width: 576px) {
+        max-width: 100%;
+        padding: 10px;
+    }
  
 }
 
@@ -69,11 +72,13 @@
 .entry-detail-hashtags {
     font-size: 12px;
     color: #1a7fd2;
+    margin-bottom: 10px;
 }
 
 .entry-detail-location {
     font-size: 12px;
     color: #a1a6bb;
+    margin-bottom: 10px;
 }
 
 .entry-detail-hints-header-text {
@@ -116,10 +121,13 @@
 }
 
 .entry-detail-interaction-icon {
-    height: 15px;
+    height: 25px;
 }
 
 .entry-detail-interaction-container {
     padding: 20px 70px 20px 70px;
     font-size: 11px;
+    @media only screen and (max-width: 576px) {
+        padding: 10px 20px;
+    }
 }

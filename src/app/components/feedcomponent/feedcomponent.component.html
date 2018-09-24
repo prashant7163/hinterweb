@@ -1,0 +1,85 @@
+<div class="feed-main-container" (scroll)="onFeedScroll()" #feedMainContainer>
+    <div class="feed-data-container">
+        <div class="feed-tile" *ngFor="let feedData of newsRes;let li=index;" (click)="tileClickHandler(feedData)">
+            <div class="feed-tile-header">
+                <div class="header-user-image-container">
+                    <div [style.background-image]="getuserImage(feedData)" class="header-user-image background_no_repeat">
+
+                    </div>
+                </div>
+                <div class="header-info-container">
+                    <div class="header-user-info-name">
+                        {{getHeaderText(feedData)}}
+                    </div>
+                    <div class="header-time-info">
+                        {{getPostElapsedTime(feedData)}}
+                    </div>
+                </div>
+
+                <div *ngIf="getTileTitle(feedData)"  class="feed-tile-title">
+                        {{getTileTitle(feedData)}}
+                </div>
+                    
+                <div class="feed-main-image-container">
+                    <div [style.background-image]="getFeedImage(feedData,i)" class="feed-main-image background_no_repeat">
+
+                    </div>
+
+                    <div [ngClass]="getImageClassType(feedData)">
+
+                        <span>
+                             <img [src]="getCellTypeImageSource(feedData)" class="celltype-icon"/>       
+                        </span>
+                        <span>
+                            {{feedData.cellType}}
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="feed-tile-interaction-container">
+                    <div class="row">
+                        <div class="col-sm-3 col-3" style="text-align: center">
+                            <div>
+                                <img src="/assets/images/icons/ico_like.png" class="feed-tile-interaction-icon" />
+                            </div>
+                            <div class="feed-tile-interaction-text">
+                                {{getLikesCount(feedData)}}
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-3" style="text-align: center">
+                            <div>
+                                <img src="/assets/images/icons/ico_comment.png" class="feed-tile-interaction-icon" />
+                            </div>
+                            <div class="feed-tile-interaction-text">
+                                {{getCommentsCount(feedData)}}
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-3">
+
+                        </div>
+                        <div class="col-sm-3 col-3">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-tile-hints-container" *ngIf="isHintAvailable(feedData)">
+                    <div class="feed-tile-hints-header">
+                        <div class="feed-tile-hints-header-text">
+                            <img src="/assets/images/icons/ico_hint_white.png" class="feed-tile-hint-icon" />
+                            <span>
+                                Hints
+                            </span>
+                        </div>
+                        <ul class="feed-tile-hints-list">
+                            <li *ngFor="let hint of getHintsArray(feedData)" [innerHtml]="hint">
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

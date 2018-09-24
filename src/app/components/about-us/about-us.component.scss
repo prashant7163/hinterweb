@@ -1,0 +1,105 @@
+.main-container{
+    padding: 40px 20px 20px 0;
+    text-align: center;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 50px);
+    @media only screen and (max-width: 576px) {
+        padding: 20px 0px 20px 0;
+        height: calc(100vh - 30px);
+     }
+}
+
+.header-horizontal{
+    background-color: #111E3C;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 15px 20px 0px 20px;
+    vertical-align: top;
+}
+
+.header-text{
+    font-size: 22px;
+    display: inline-block;
+}
+
+.about-us-data-left-text{
+    font-size:  20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    @media only screen and (max-width: 576px) {
+        font-size: 12px;
+     }
+}
+
+.about-us-data-right-header{
+    font-size:  30px;
+    font-family: Montserrat-Light;
+    margin-bottom: 20px;
+    @media only screen and (max-width: 576px) {
+        font-size: 14px;
+     }
+}
+
+.about-us-data-right-text{
+    font-size:  20px;
+    font-family: Montserrat-Light;
+    color: #a1a6bb;
+    margin-bottom: 20px;
+    @media only screen and (max-width: 576px) {
+        font-size: 12px;
+     }
+}
+
+.about-us-data-right-container{
+    text-align: left;
+    padding: 100px 10px;
+    @media only screen and (max-width: 576px) {
+        padding: 10px;
+        text-align: center;
+     }
+}
+
+.footer-container{
+    background-color:#111E3C;
+    min-height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+}
+
+.about-us-data-join-us{
+    background-color: #111E3C;
+    padding: 5px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: 2px 5px rgba(0, 0, 0, .16);
+    @media only screen and (max-width: 576px) {
+        font-size: 12px;
+     }
+}
+
+.page{
+    margin-left: 10%;
+    margin-right: 10%;
+    height: calc(100% - 50px);
+    @media only screen and (max-width: 576px) {
+        margin-left: 15px;
+        margin-right: 15px;
+        height: calc(100% - 30px);
+     }
+}
+
+.about-us-image{
+    max-height: 70vh;
+    max-width: 100%;
+  
+}

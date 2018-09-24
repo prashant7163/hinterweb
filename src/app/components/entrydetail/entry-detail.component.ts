@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, AfterViewInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppModuleHttpService } from '../../services/app-module-http.service';
 import { DataObject } from '../../models/data-object';
 import { BaseResponse } from '../../models/base-response';
@@ -11,7 +11,7 @@ import { ConstantFunctions } from '../../services/constant-functions';
 @Component({
   selector: 'entry-detail',
   templateUrl: './entry-detail.component.html',
-  styleUrls: ['./entry-detail.component.css']
+  styleUrls: ['./entry-detail.component.scss']
 })
 
 
@@ -19,7 +19,7 @@ export class EntryDetailComponent implements OnInit, AfterViewInit {
 
   detailResponse: DataObject;
 
-  constructor(private route: ActivatedRoute, private appServices: AppModuleHttpService,
+  constructor(private route: ActivatedRoute, private appServices: AppModuleHttpService, private router: Router,
     private messageService: MessageService, private domSanitizer: DomSanitizer) {
 
   }
@@ -28,7 +28,12 @@ export class EntryDetailComponent implements OnInit, AfterViewInit {
     this.route.paramMap.subscribe(
       params => {
         let id: string = params.get('id');
-        id = atob(id);
+        try {
+          id = atob(id);
+        } catch (ex) {
+          this.router.navigate(['/']);
+        }
+
         if (id != null) {
           let idSplit: string[] = id.split("/");
           if (idSplit != null && idSplit.length > 1) {
@@ -48,6 +53,8 @@ export class EntryDetailComponent implements OnInit, AfterViewInit {
             }
           }
 
+        } else {
+          this.router.navigate(['/']);
         }
       }
     );
@@ -95,7 +102,11 @@ export class EntryDetailComponent implements OnInit, AfterViewInit {
     let retArr: string[] = [];
     if (this.detailResponse && this.detailResponse.hintsJSONArray) {
       retArr = JSON.parse(this.detailResponse.hintsJSONArray);
-      retArr[4] = retArr[4].replace(/"/g, " ");
+      for (let li: number = 0; li < retArr.length; li++) {
+        retArr[li] = retArr[li]
+          .replace(/\\u(....)/g, (match, p1) => String.fromCharCode(parseInt(p1, 16)))
+          .replace(/\\(\d{3})/g, (match, p1) => String.fromCharCode(parseInt(p1, 8)));
+      }
     }
     return retArr;
   }
@@ -110,12 +121,12 @@ export class EntryDetailComponent implements OnInit, AfterViewInit {
   getLikesCount(): string {
     let likeCount: number = 0;
     if (this.detailResponse && this.detailResponse.likes) {
-      try{
+      try {
         likeCount = parseInt(this.detailResponse.likes.count);
-      }catch(ex){
+      } catch (ex) {
 
       }
-      
+
     }
     if (likeCount == 1) {
       return "1 like";
@@ -141,12 +152,12 @@ export class EntryDetailComponent implements OnInit, AfterViewInit {
   getThanksCount(): string {
     let thankCount: number = 0;
     if (this.detailResponse && this.detailResponse.thanks) {
-      try{
+      try {
         thankCount = parseInt(this.detailResponse.thanks.count);
-      }catch(ex){
+      } catch (ex) {
 
       }
-      
+
     }
     if (thankCount == 1) {
       return "1 thank";

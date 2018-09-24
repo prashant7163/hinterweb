@@ -1,4 +1,5 @@
 export const environment = {
-    production: true
+    production: true,
+    dataUrl: "http://ds.hinter.sg/"
   };
   
