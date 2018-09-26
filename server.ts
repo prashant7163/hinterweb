@@ -111,21 +111,8 @@ app.post('/hs/:server/*', (req, res) => {
         headersVal =
             { 'content-type': 'application/json', 'email': req.headers.email, 'authToken': req.headers.authtoken }
     } else {
-<<<<<<< HEAD
-        request.post({
-            uri: URL,
-            headers:
-                { 'content-type': 'application/json', 'email': req.headers.email, 'authToken': req.headers.authtoken },
-            body: ''
-        }, function (error, response) {
-           // console.log(response);
-            res.writeHead(response.statusCode, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
-            res.end(response.body);
-        });
-=======
         headersVal =
             { 'content-type': 'application/json' };
->>>>>>> 08e3bf7e16b687c73d1ae9811c062b587722c6e7
     }
     request.post({
         uri: URL,
