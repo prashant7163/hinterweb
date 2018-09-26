@@ -10,11 +10,12 @@ import { join } from 'path';
 enableProdMode();
 var fs = require('fs');
 var request = require('request');
+var bodyParser = require('body-parser');
 
 // Express server
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
@@ -31,6 +32,9 @@ app.engine('html', ngExpressEngine({
         provideModuleMap(LAZY_MODULE_MAP)
     ]
 }));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -86,7 +90,50 @@ app.get('/hsimage/:server/:type/:id/:dpTime', (req, res) => {
     //res.status(200).send('images supported');
 });
 
-app.get('/hs/:server/:type/*', (req, res) => {
+
+app.post('/hs/:server/*', (req, res) => {
+    var URL = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi";
+    // var requested_url = req.url;
+    if (req.params.server == 'dev') {
+        URL = "http://ec2-52-221-204-177.ap-southeast-1.compute.amazonaws.com:7576/hinterapi";
+    }
+    URL = URL + "/" + req.params[0];
+    URL = URL + "?";
+    for (let queryKey in req.query) {
+        URL = URL + queryKey + "=" + req.query[queryKey] + "&";
+    }
+    if (URL[URL.length - 1] == '&' || URL[URL.length - 1] == '?') {
+        URL = URL.substring(0, URL.length - 1);
+    }
+    console.log("hs url called:" + URL + ":" + req.headers.email);
+    var headersVal: any = {};
+    if (req.headers.authtoken != undefined) {
+        headersVal =
+            { 'content-type': 'application/json', 'email': req.headers.email, 'authToken': req.headers.authtoken }
+    } else {
+        headersVal =
+            { 'content-type': 'application/json' };
+    }
+    request.post({
+        uri: URL,
+        headers:
+            headersVal,
+        json: true,
+        body: req.body
+    }, function (error, response) {
+        if (response) {
+            res.writeHead(response.statusCode, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
+            res.end(JSON.stringify(response.body));
+        } else {
+            console.log(error);
+            res.writeHead(400, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
+            res.end('');
+        }
+
+    });
+});
+
+app.get('/hs/:server/*', (req, res) => {
     console.log("hs url called, server=" + req.params.server + ", type=" + req.params.type);
     var URL = "http://ec2-52-221-207-13.ap-southeast-1.compute.amazonaws.com:7576/hinterapi";
     // var requested_url = req.url;
@@ -103,27 +150,13 @@ app.get('/hs/:server/:type/*', (req, res) => {
         URL = URL.substring(0, URL.length - 1);
     }
     console.log("hs url called:" + URL + ":" + req.headers.email);
-    if (req.params.type == 'get') {
-        request.get(URL, {
-            headers:
-                { 'content-type': 'application/json', 'email': req.headers.email, 'authToken': req.headers.authtoken }
-        }, function (error, response) {
-            res.writeHead(response.statusCode, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
-            res.end(response.body);
-        });
-    } else {
-        request.post({
-            uri: URL,
-            headers:
-                { 'content-type': 'application/json', 'email': req.headers.email, 'authToken': req.headers.authtoken },
-            body: ''
-        }, function (error, response) {
-            console.log(response);
-            res.writeHead(response.statusCode, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
-            res.end(response.body);
-        });
-    }
-
+    request.get(URL, {
+        headers:
+            { 'content-type': 'application/json', 'email': req.headers.email, 'authToken': req.headers.authtoken }
+    }, function (error, response) {
+        res.writeHead(response.statusCode, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
+        res.end(response.body);
+    });
     return;
 });
 
