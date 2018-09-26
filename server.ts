@@ -14,7 +14,7 @@ var request = require('request');
 // Express server
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
@@ -118,7 +118,7 @@ app.get('/hs/:server/:type/*', (req, res) => {
                 { 'content-type': 'application/json', 'email': req.headers.email, 'authToken': req.headers.authtoken },
             body: ''
         }, function (error, response) {
-            console.log(response);
+           // console.log(response);
             res.writeHead(response.statusCode, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' });
             res.end(response.body);
         });
